@@ -75,3 +75,5 @@ npm run build
 * `src/components/elements` - elements are sub-components of features.
 * `src/components/features` - features are major components.
 * `src/components/structure` - structural elements such as the main display page, navbars, nav panels, footers, etc.
+* `src/store` - vuex store
+* `src/store/modules/` - vuex modules
