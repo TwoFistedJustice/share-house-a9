@@ -12,7 +12,8 @@
         <f7-col desktop-width="10" tablet-width="33">
           <f7-button small round raised
                      color="blue"
-                     @click="buy">Bought!
+                     @click="buy"
+                     back>Bought!
           </f7-button>
         </f7-col>
         <f7-col desktop-width="10" tablet-width="33"></f7-col>
@@ -35,7 +36,7 @@
             </f7-nav-right>
           </f7-navbar>
 
-
+          <p>You can move between supply features by swiping</p>
           <p>Click an item when you add or remove it from your cart.</p>
           <p>Green means it's in your cart. </p>
           <p>Red means it's not in your cart. </p>

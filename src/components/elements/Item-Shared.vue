@@ -2,8 +2,9 @@
   <!--<f7-page>-->
   <div @click="flip">
     <f7-block>
-      <f7-card>
-        <f7-card-content v-bind:bg-color="toggleColor">
+      <f7-card  class='supply-item'
+                v-bind:bg-color="toggleColor">
+        <f7-card-content>
           <p>{{supply.item}}</p>
         </f7-card-content>
       </f7-card>

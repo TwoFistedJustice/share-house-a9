@@ -1,7 +1,8 @@
 <template>
   <div @click="flipBool">
     <f7-block >
-      <f7-card v-bind:bg-color="toggleColor">
+      <f7-card  class='supply-item'
+                v-bind:bg-color="toggleColor">
         <f7-card-content >
           <p v-if="!supply.inCart">{{supply.item}}</p>
           <p v-if="supply.inCart">{{supply.item}} added to cart</p>
@@ -21,9 +22,9 @@
       toggleColor(){
 
         if(this.supply.inCart){
-          return "green";
+          return "yellow";
         } else {
-          return "red";
+          return "pink";
         }
       }
     },
@@ -47,6 +48,11 @@
 </script>
 
 <style scoped>
+
+  /*.supply-item {*/
+    /*text-align: center;*/
+    /*border-radius: 40%;*/
+  /*}*/
 
 
   p {

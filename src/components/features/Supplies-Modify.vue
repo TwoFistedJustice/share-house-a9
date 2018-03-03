@@ -1,6 +1,10 @@
 <template>
   <f7-page>
-    <f7-navbar title="Supplies Modify" back-link="back"></f7-navbar>
+    <f7-navbar title="Supplies Modify" back-link="Close">
+      <f7-nav-right>
+        <f7-button small round raised color="orange" popup-open="#supplies-modify-instructions">How To</f7-button>
+      </f7-nav-right>
+    </f7-navbar>
     <f7-block-title>Modify Supplies</f7-block-title>
     <f7-list form>
       <f7-list-item>
@@ -30,6 +34,25 @@
                  :key="supply.item"
                  :supply="supply"
                  :index="index"></item-modify>
+
+
+    <f7-popup id="supplies-modify-instructions">
+      <f7-view>
+        <f7-page>
+          <f7-navbar title="How to use the inventory list">
+            <f7-nav-right>
+              <f7-link popup-close>Close</f7-link>
+            </f7-nav-right>
+          </f7-navbar>
+          <p>You can move between supply features by swiping</p>
+          <p>To add a new supply, enter it into the box and press the Add Supply button</p>
+          <p>To remove a supply, check the "Allow Deletion" box, and the press the Delete button</p>
+
+
+        </f7-page>
+      </f7-view>
+    </f7-popup>
+
 
 
   </f7-page>

@@ -30,6 +30,7 @@
                 <f7-link popup-close>Close</f7-link>
               </f7-nav-right>
             </f7-navbar>
+            <p>You can move between supply features by swiping</p>
             <p>Click an item when you run out.</p>
             <p>Green means you have it. </p>
             <p>Red means you have run out. </p>

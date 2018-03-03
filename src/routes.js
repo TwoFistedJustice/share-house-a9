@@ -9,11 +9,12 @@ import PanelLeftPage from './components/structure/Panel-Left.vue';
 
 import PanelRightPage from './components/structure/Panel-Right.vue';
 
+// SUPPLY IMPORTS
+import SupplyTabs from './components/structure/Supply-Tabs.vue';
 import ShoppingList from './components/features/Shopping-List.vue';
 import SuppliesModify from './components/features/Supplies-Modify.vue';
-
 import InventoryList from './components/features/Supplies-Shared.vue';
-import InventoryListItem from './components/elements/Item-Shared.vue';
+
 
 import JoinHouse from './components/directives/Join.vue';
 
@@ -21,6 +22,10 @@ import JoinHouse from './components/directives/Join.vue';
 export default [
   // {path: '',
   // component: },
+
+  {path: '/supplies/',
+  component: SupplyTabs},
+
 
   {path: '/shopping-list/',
     component: ShoppingList},
