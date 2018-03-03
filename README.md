@@ -71,7 +71,7 @@ npm run build
 * `src/main.js` - main app file where you include/import all required libs and init app
 * `src/routes.js` - app routes
 * `src/app.vue` - main app structure/component
-* `src/components/directives` - components whose purpose is to either give the user information or to direct their actions to do something necessary.
+* `src/components/directives` - components whose purpose is to either give the user information or to direct their actions.
 * `src/components/elements` - elements are sub-components of features.
 * `src/components/features` - features are major components.
 * `src/components/structure` - structural elements such as the main display page, navbars, nav panels, footers, etc.
