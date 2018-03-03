@@ -1,0 +1,3 @@
+Directive components are separate components whose purpose is to either give the user information
+or to direct their actions to do something necessary. Examples are "About Us" and when a user first
+signs up, they don't belong to a house, so direct them to join or create a house.

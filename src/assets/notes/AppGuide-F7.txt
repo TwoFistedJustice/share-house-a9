@@ -1,0 +1,37 @@
+App.vue
+  Left Panel
+    Members feature menu, slides out from left
+
+  Right Panel
+    Admins feature menu, slides out from right
+
+  Main View -- essentially the display port
+
+  Modals - triggered by buttons in home.vue
+  Popup-About
+    A popup about Share-House - triggered by the "About" button prior to login
+
+  Login-Screen
+    A popup for registered users to log in.
+
+
+   Signup Screen
+    A popup for new users to create an account
+
+Methods
+createAccount()
+  dispatches the createNewUser action in authModule
+
+ logUserIn()
+    dispatches login action in authModule
+
+ clearFormData()
+  sets the form data in the data prop back to default values
+
+  Lifecycle Hook
+  created()
+    dispatches actions to get things going
+
+
+
+

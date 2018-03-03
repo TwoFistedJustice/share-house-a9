@@ -1,0 +1,20 @@
+Need to FIRST have the ablity to create a HOUSE!!!!!
+The very first thing it should do when a user logs in:
+  See if they belong to a house, if not, then create or join
+    a Modal should work.
+
+Need to create supplies form
+
+Store User is trying to patch to localhost instead of to firebase
+  - database URL not referenced in  main
+
+
+
+Idea to simplify joining a house: for A10
+
+Let people choose whatever name they like
+Then give them a short numeric code 3 or 4 numbers- sequential n+1
+they enter the house name in one input using the alpha keyboard
+then they enter the code in another, using phone dialer
+The admin gets to accept or deny a new member
+      - this might require Cordova

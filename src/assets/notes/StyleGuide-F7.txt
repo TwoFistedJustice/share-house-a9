@@ -1,0 +1,8 @@
+BUTTONS
+Major Action (login, etc) buttons are always just f7-button with no styling
+
+Minor Action (toggle a boolean) are always: small round raised fill
+
+Instruction buttons are always: small round raised color="orange" popup-open="#someID"
+
+Instructins always open in a popup modal

@@ -1,0 +1,2 @@
+Elements are sub-components of features - supply items and so forth.
+This may not be necessary with F7
