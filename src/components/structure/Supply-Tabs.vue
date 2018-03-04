@@ -2,7 +2,8 @@
 
   <f7-page>
 
-    <f7-toolbar tabbar labels>
+    <!--<f7-toolbar tabbar bottom-md labels>-->
+    <f7-toolbar tabbar bottom-md labels>
       <f7-link tab-link="#tab1" text="Shared"></f7-link>
       <f7-link tab-link="#tab2" text="Shopping"></f7-link>
       <f7-link tab-link="#tab3" text="Add/Delete"></f7-link>

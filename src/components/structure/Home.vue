@@ -10,7 +10,7 @@
           text="Menu"></f7-link>
       </f7-nav-left>
       <f7-nav-title>Share House A9</f7-nav-title>
-      <f7-nav-right>
+      <f7-nav-right v-if="isAuthenticated">
         <f7-link icon-if-ios="f7:menu" icon-if-md="material:menu" panel-open="right" text="Admin"></f7-link>
       </f7-nav-right>
     </f7-navbar>
@@ -61,15 +61,26 @@
       ...mapGetters({
         isAuthenticated: 'auth/isAuthenticated',
         getActiveHouse: 'house/getActiveHouse',
-        getUserInfo: 'user/getUserInfo'
+        getUserInfo: 'user/getUserInfo',
+        getBelongsToHouse: 'user/getBelongsToHouse'
       }),
 
     },
+    // updated(){
+    //   console.log('****Home.vue if user is not member load join.vue');
+    //   if(!this.getBelongsToHouse ){
+    //     console.log('logged in but does not belong ');
+    //     view.router.navigate('/join-house/');
+    //   } else {
+    //     return;
+    //   }
+    // },
     methods: {
       ...mapActions({
         // saveSupplies: t.saveSupply,
         // fetchSupplies: t.fetchSupply
       }),
+
       TestFn() {
 
         // confirm("Which button would you like to press to blow up the earth?");

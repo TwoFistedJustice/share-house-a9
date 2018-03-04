@@ -36,7 +36,8 @@
             </f7-nav-right>
           </f7-navbar>
 
-          <p>You can move between supply features by swiping</p>
+          <p>You can move between supply features either by swiping or
+            by using the toolbar on the bottom of the screen</p>
           <p>Click an item when you add or remove it from your cart.</p>
           <p>Green means it's in your cart. </p>
           <p>Red means it's not in your cart. </p>

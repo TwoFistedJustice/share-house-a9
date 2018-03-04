@@ -1,3 +1,11 @@
+import Vue from 'vue';
+import {store} from './store/store';
+
+// import {mapGetters} from 'vuex';
+//
+// const belongsToHouse = store.state.user.belongsToHouse;
+// const thing = mapGetters ;
+
 // import HomePage from './pages/home.vue';
 import HomePage from './components/structure/Home.vue';
 import AboutPage from './pages/about.vue';
@@ -23,52 +31,201 @@ export default [
   // {path: '',
   // component: },
 
-  {path: '/supplies/',
-  component: SupplyTabs},
+  //STRUCTURE ROUTES
+
+  // {
+  //   path: '/',
+  //   component: HomePage,
+  //
+  //   },
 
 
-  {path: '/shopping-list/',
-    component: ShoppingList},
-
-  {path: '/inventory-list/',
-    component: InventoryList},
-
-  {path: '/supplies-modify/',
-    component: SuppliesModify },
-
-  {path: '/join-house/',
-  component: JoinHouse },
-
-
-
-
-  // Default F7 Template Pages
   {
     path: '/',
     component: HomePage,
+    // async(routeTo, routeFrom, resolve, reject,) {
+    //   if (true) {
+    //     console.log("HOMEPAGE*****vuex value: " + thing);
+    //     resolve({
+    //       component: JoinHouse})
+    //     }
+    //   else
+    //     {
+    //       resolve({
+    //         component: HomePage})
+    //     }
+    //   }
   },
+
+
+  {
+    path: '/join-house/',
+    component: JoinHouse,
+    // async(routeTo, routeFrom, resolve, reject) {
+    //   if (belongsToHouse) {
+    //     console.log("JOIN*****vuex value: " + belongsToHouse);
+    //     resolve({
+    //       component: HomePage})
+    //   }
+    //   else
+    //   {
+    //     resolve({
+    //       component: JoinHouse})
+    //   }
+    // }
+  },
+
+  // {
+  //   path: '/',
+  //   component: HomePage,
+  //   async(routeTo, routeFrom, resolve, reject) {
+  //     if (store.state.auth.idToken) {
+  //       resolve({
+  //         component: SomeComponent})
+  //     }
+  //     else
+  //     {
+  //       resolve({
+  //         component: HomePage})
+  //     }
+  //   }
+  // },
+
+
+
   {
     path: '/panel-left/',
-    component: PanelLeftPage,
+    component:
+    PanelLeftPage,
+    created:
+
+      function () {
+        console.log('created');
+      }
   },
+
   {
     path: '/panel-right/',
-    component: PanelRightPage,
+    component:
+    PanelRightPage,
+
   },
+
+  {
+    path: '/supplies/',
+    component:
+    SupplyTabs
+  },
+
+
+// FEATURE ROUTES
+
+  {
+    path: '/shopping-list/',
+    component:
+    ShoppingList,
+
+  },
+
+  {
+    path: '/inventory-list/',
+    component:
+    InventoryList
+  },
+
+  {
+    path: '/supplies-modify/',
+    component:
+    SuppliesModify
+  },
+
+
+
+// Default F7 Template Pages
+
   {
     path: '/about/',
     component: AboutPage,
-  },
+  }
+  ,
   {
     path: '/form/',
     component: FormPage,
-  },
-  // {
-  //   path: '/dynamic-route/blog/:blogId/post/:postId/',
-  //   component: DynamicRoutePage,
-  // },
+  }
+  ,
+// {
+//   path: '/dynamic-route/blog/:blogId/post/:postId/',
+//   component: DynamicRoutePage,
+// },
   {
     path: '(.*)',
-    component: NotFoundPage,
-  },
-];
+    component:
+    NotFoundPage,
+  }
+  ,
+
+  {
+    path: '/some-page/',
+    // Component Object
+    component:
+      {
+        template: `
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title">{{title}}</div>
+            </div>
+          </div>
+          <div class="page-content">
+            <a @click="openAlert" class="red-link">Open Alert</a>
+            <div class="list simple-list">
+              <ul>
+                {{#each names}}
+                  <li>{{this}}</li>
+                {{/each}}
+              </ul>
+            </div>
+          </div>
+        </div>
+      `,
+        style:
+          `
+        .red-link {
+          color: red;
+        }
+      `,
+        data:
+
+          function () {
+            return {
+              title: 'Component Page',
+              names: ['John', 'Vladimir', 'Timo'],
+            }
+          }
+
+        ,
+        methods: {
+          openAlert: function () {
+            var self = this;
+            self.$app.dialog.alert('Hello world!');
+          }
+          ,
+        }
+        ,
+        on: {
+          pageInit: function (e, page) {
+            // do something on page init
+          }
+          ,
+          pageAfterOut: function (e, page) {
+            // page has left the view
+          }
+          ,
+        }
+      }
+    ,
+  }
+  ,
+
+]
+;

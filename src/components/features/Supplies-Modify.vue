@@ -44,7 +44,8 @@
               <f7-link popup-close>Close</f7-link>
             </f7-nav-right>
           </f7-navbar>
-          <p>You can move between supply features by swiping</p>
+          <p>You can move between supply features either by swiping or
+            by using the toolbar on the bottom of the screen</p>
           <p>To add a new supply, enter it into the box and press the Add Supply button</p>
           <p>To remove a supply, check the "Allow Deletion" box, and the press the Delete button</p>
 
