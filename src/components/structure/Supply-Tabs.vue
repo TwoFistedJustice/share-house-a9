@@ -2,14 +2,15 @@
 
   <f7-page>
 
-    <!--<f7-toolbar tabbar bottom-md labels>-->
+
     <f7-toolbar tabbar bottom-md labels>
       <f7-link tab-link="#tab1" text="Shared"></f7-link>
       <f7-link tab-link="#tab2" text="Shopping"></f7-link>
       <f7-link tab-link="#tab3" text="Add/Delete"></f7-link>
     </f7-toolbar>
 
-    <f7-tabs swipeable>
+    <f7-tabs swipeable data-loop="true">
+
       <f7-tab id="tab1">
         <inventory-list></inventory-list>
       </f7-tab>
@@ -20,6 +21,7 @@
         <supplies-modify></supplies-modify>
       </f7-tab>
     </f7-tabs>
+
   </f7-page>
 
 </template>

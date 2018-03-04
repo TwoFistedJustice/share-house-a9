@@ -25,7 +25,7 @@
                       :title="'Create a new house'"></f7-list-item>
 
         <f7-block>
-          <!--<f7-block-title>Create a new house</f7-block-title>-->
+
           <!-- only the button changes each calls a different function-->
           <f7-input type="text"
                     placeholder="House name"
