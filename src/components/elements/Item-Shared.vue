@@ -5,8 +5,13 @@
       <f7-card  class='supply-item'
                 v-bind:bg-color="toggleColor">
         <f7-card-content>
-          <p>{{supply.item}}</p>
+          <p class="big">{{supply.item}}</p>
+          <p class="small" v-if="supply.have"> We have this.</p>
+          <p class="small"  v-if="!supply.have"> We need this.</p>
         </f7-card-content>
+
+
+
       </f7-card>
     </f7-block>
   </div>
@@ -43,11 +48,25 @@
   /*margin: 5px;*/
   /*padding: 5px;*/
   /*}*/
-
   p {
+    margin: .5em;
+
+  }
+
+  .big {
     font-size: 2em;
     font-weight: bold;
     color: black;
+    line-height: 0.8;
   }
+
+  .small {
+
+    font-weight: bold;
+    font-variant: all-petite-caps;
+    color: black;
+    line-height: 0.6;
+  }
+
 
 </style>
