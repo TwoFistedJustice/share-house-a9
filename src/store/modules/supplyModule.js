@@ -95,9 +95,9 @@ const mutations = {
     state.supplies.splice(index, 1);
   },
   SET_CHANGED(state) {
-    /*  name is the name of the calling action,
+    /*  nameFull is the nameFull of the calling action,
     * it helps to find which of the 40 gazillion calls is causing a problem
-    * console.log('MUTATE_SET_CHANGED: ', name);
+    * console.log('MUTATE_SET_CHANGED: ', nameFull);
     * state.changed starts as false, once changed to true, it is always true until destroyed */
     state.changed = true;
   },

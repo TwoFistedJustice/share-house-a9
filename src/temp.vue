@@ -25,10 +25,10 @@
 
           <div v-if="superPowers">
 
-            <h3>Change the house name</h3>
+            <h3>Change the house nameFull</h3>
             <button class="btn btn-primary" @click="changeHouseName">Change House Name</button>
             <input type="text" name="changeHouseName" id="changeHouseName" v-model="newHouseName"
-                   placeholder="New house-name">
+                   placeholder="New house-nameFull">
 
             <br><br>
             <h3>Destroy everything!!! Mwahahaha!!!</h3>
@@ -94,7 +94,7 @@
       <br><br><br>
       <ul>
         <li>Adminstrate House</li>
-        <li>Show/change name of house</li>
+        <li>Show/change nameFull of house</li>
         <li>Delete house by removing all members</li>
         <li>Show featureSet</li>
         <br>

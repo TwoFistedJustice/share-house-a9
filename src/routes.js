@@ -1,7 +1,10 @@
 import Vue from 'vue';
 
+// import {store} from './store/store';
+
 import {store} from './store/store';
-const belongsToHouse = store.state.user.belongsToHouse;
+// let belongsToHouse = store.state.user.belongsToHouse;
+
 
 
 // import HomePage from './pages/home.vue';
@@ -41,19 +44,20 @@ export default [
   {
     path: '/',
     component: HomePage,
+
     // async(routeTo, routeFrom, resolve, reject,) {
-      // if (belongsToHouse) {
-      //   console.log("belongsToHouse: " + belongsToHouse);
-        // resolve({
-        //   component: JoinHouse})
-        // }
-      // else
-      //   {
-      //     console.log("belongsToHouse: " + belongsToHouse);
-          // resolve({
-          //   component: HomePage})
-        // }
-      // }
+    //   if (store.state.user.belongsToHouse) {
+    //     console.log("value: " + store.state.user.belongsToHouse);
+    //     resolve({
+    //       component: JoinHouse})
+    //     }
+    //   else
+    //     {
+    //       console.log("value: " + store.state.user.belongsToHouse);
+    //       resolve({
+    //         component: HomePage})
+    //     }
+    //   }
   },
 
 

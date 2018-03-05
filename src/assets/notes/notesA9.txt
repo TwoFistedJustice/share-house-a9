@@ -12,9 +12,9 @@ Store User is trying to patch to localhost instead of to firebase
 
 Idea to simplify joining a house: for A10
 
-Let people choose whatever name they like
+Let people choose whatever nameFull they like
 Then give them a short numeric code 3 or 4 numbers- sequential n+1
-they enter the house name in one input using the alpha keyboard
+they enter the house nameFull in one input using the alpha keyboard
 then they enter the code in another, using phone dialer
 The admin gets to accept or deny a new member
       - this might require Cordova

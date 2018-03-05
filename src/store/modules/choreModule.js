@@ -7,11 +7,11 @@ const state = {
   //{key: 'A', task: 'Trash', description: 'Lorum ipsum'}
   chores: [],
 
-  //{id: 1,name: 'Russ', color:'Yellow', trash: true }
+  //{id: 1,nameFull: 'Russ', color:'Yellow', trash: true }
   names: [],
 
   //rotation is the final object as in "chores rotation"
-  // {task: 'Trash', name: 'Russ',completed: false},
+  // {task: 'Trash', nameFull: 'Russ',completed: false},
   rotation: [],
 };
 
@@ -35,7 +35,7 @@ const mutations = {
 
     let currentKey = state.names.findIndex(element => element.choreKey === true);
 
-    let newKey = state.names.findIndex(element => element.name === name);
+    let newKey = state.names.findIndex(element => element.nameFull === name);
 
     state.names[currentKey].choreKey = false;
     state.names[newKey].choreKey = true;
@@ -55,7 +55,7 @@ const mutations = {
       let obj = {
         task: state.chores[i].task,
         description: state.chores[i].description,
-        name: state.names[i].name,
+        name: state.names[i].nameFull,
         completed: false
       };
       state.rotation.push(obj);

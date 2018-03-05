@@ -12,10 +12,10 @@ import {APIkey, gObj_hasRoot} from '../../config.js';
 
 
 const state = {
-  idToken: null, /* 'A Firebase Auth ID token for the authenticated name.' */
-  keepMeLoggedIn: true, //to be set by name - eventually
+  idToken: null, /* 'A Firebase Auth ID token for the authenticated nameFull.' */
+  keepMeLoggedIn: true, //to be set by nameFull - eventually
   refreshToken: null,
-  userId: null, /* holds data.localid "The uid of the authenticated name." */
+  userId: null, /* holds data.localid "The uid of the authenticated nameFull." */
 
 };
 

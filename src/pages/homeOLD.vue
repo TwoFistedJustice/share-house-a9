@@ -56,7 +56,7 @@
       <p>if user.belongsToHouse is false....</p>
       <b><p>if not a member display join or create</p></b>
       <p>good place to display this week's house job</p>
-      <p>Welcome home {{getUserInfo.name}}!</p>
+      <p>Welcome home {{getUserInfo.nameFull}}!</p>
       <p>To access your stuff use the menu in the upper left corner!</p>
       <f7-button @click="onLogout">Log out</f7-button>
 

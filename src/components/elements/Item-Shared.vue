@@ -53,20 +53,20 @@
 
   }
 
-  .big {
-    font-size: 2em;
-    font-weight: bold;
-    color: black;
-    line-height: 0.8;
-  }
+  /*.big {*/
+    /*font-size: 2em;*/
+    /*font-weight: bold;*/
+    /*color: black;*/
+    /*line-height: 0.8;*/
+  /*}*/
 
-  .small {
+  /*.small {*/
 
-    font-weight: bold;
-    font-variant: all-petite-caps;
-    color: black;
-    line-height: 0.6;
-  }
+    /*font-weight: bold;*/
+    /*font-variant: all-petite-caps;*/
+    /*color: black;*/
+    /*line-height: 0.6;*/
+  /*}*/
 
 
 </style>

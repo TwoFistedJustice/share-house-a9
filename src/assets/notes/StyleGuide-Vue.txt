@@ -14,7 +14,7 @@ https://msdn.microsoft.com/en-us/library/aa240858%28v=vs.60%29.aspx?f=255&MSPPEr
 
 My Addendum
   Vuex Modules
-    - Always end the file name with "Module"
+    - Always end the file nameFull with "Module"
     - Omit 'Module' when importing into the project
 
 Namespacing
@@ -36,14 +36,14 @@ Namespacing
 
   Actions
     - cameCase
-    - if primarily committing a mutation, use same name as mutation but camelCase
+    - if primarily committing a mutation, use same nameFull as mutation but camelCase
 
 
 
 
    Arguments
     When passing a complex object as an argument
-        - If the object is local scope only, end its name with "Blob"
+        - If the object is local scope only, end its nameFull with "Blob"
           - example:
                 let dataBlob = {
                   prop1: true,

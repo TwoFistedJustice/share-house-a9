@@ -38,7 +38,7 @@ const mutations = {
 const actions = {
 
   //payload needs to get changed so it includes isAdmin: t/f
-  //todo refactor to check DB for house name and street
+  //todo refactor to check DB for house nameFull and street
   addMember({dispatch, commit}, payload) {
     // console.log('adding member');
 
@@ -93,7 +93,7 @@ const actions = {
     let houseId = localStorage.getItem(('houseId'));
     let token = localStorage.getItem('token');
 
-    let isReallySure = confirm('Are you sure you want to give ' + memberData.name + ' Admin power?');
+    let isReallySure = confirm('Are you sure you want to give ' + memberData.nameFull + ' Admin power?');
     if (isReallySure) {
 
       globalAxios.put('/houses/' + houseId + '/members/' + memberId + '/isAdmin.json?auth=' + token, true)
@@ -129,7 +129,7 @@ const actions = {
     /* receives memberId from calling function
     *  if # admins is less than two, and member is admin, cannot delete
     *  payload looks like:
-    *  {id: userId, name: firstLast, idAdmin: t/f, role: ''}
+    *  {id: userId, nameFull: firstLast, idAdmin: t/f, role: ''}
     * */
     let canRemove = false;
     let adminCount = getters.GetAdminCount;
@@ -149,7 +149,7 @@ const actions = {
     /* Remove the member if canLeave is true */
     if (canRemove) {
 
-      let isReallySure = confirm('Are you sure you want to remove ' + memberData.name + '?');
+      let isReallySure = confirm('Are you sure you want to remove ' + memberData.nameFull + '?');
       if (isReallySure) {
 
         globalAxios.delete('/houses/' + houseId + '/members/' + memberId + '.json?auth=' + token)

@@ -28,7 +28,7 @@
 
           <!-- only the button changes each calls a different function-->
           <f7-input type="text"
-                    placeholder="House name"
+                    placeholder="House nameFull"
                     :value="formData.houseName"
                     v-on:input="formData.houseName =$event.target.value"></f7-input>
 
@@ -75,9 +75,9 @@
             </f7-nav-right>
           </f7-navbar>
           <f7-block strong>
-            <p>Enter the name you have chosen for you house.</p>
+            <p>Enter the nameFull you have chosen for you house.</p>
 
-            <p>You can enter any name you like, even one that has already been used.</p>
+            <p>You can enter any nameFull you like, even one that has already been used.</p>
 
             <p>Your street is your unique identifier. It can be your real street or one you make up.</p>
 
@@ -101,7 +101,7 @@
           </f7-navbar>
 
           <f7-block strong>
-            <p>Enter the name and street of the house you would like to join.</p>
+            <p>Enter the nameFull and street of the house you would like to join.</p>
 
             <p>The street is the unique identifier of the house. You must enter it
               EXACTLY as the it was entered when the house was created.</p>

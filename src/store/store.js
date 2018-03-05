@@ -11,6 +11,7 @@ Vue.use(Vuex);
 
 
 export const store = new Vuex.Store({
+
   state:{},
   getters:{},
   mutations:{},
@@ -25,5 +26,6 @@ export const store = new Vuex.Store({
   }
 
 }); // END STORE
+
 
 

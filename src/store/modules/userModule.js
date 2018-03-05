@@ -20,7 +20,9 @@ const state = {
   belongsToHouse: false,
   userInfo: {
     email: null,
-    name: null,
+    nameFirst: null,
+    nameLast: null,
+    nameFull: null,
     isAdmin: false,
     role: ''
   }
@@ -53,7 +55,9 @@ const mutations = {
   },
 
   CLEAR_USER_NAME(state) {
-    state.userInfo.name = '';
+    state.userInfo.nameFirst = '';
+    state.userInfo.nameLast = '';
+    state.userInfo.nameFull = '';
   },
 
   SET_BELONGS_TO_HOUSE(state, bool) {
@@ -62,9 +66,12 @@ const mutations = {
   },
 
   SET_USER_INFO(state, userBlob) {
-    /* Set user's name, admin status, and role */
+    /* Set user's nameFull, admin status, and role */
     state.userInfo.email = userBlob.email;
-    state.userInfo.name = userBlob.name;
+    state.userInfo.nameFirst = userBlob.nameFirst;
+    state.userInfo.nameLast = userBlob.nameLast;
+    state.userInfo.nameFull = userBlob.nameFirst + ' ' + userBlob.nameLast;
+    // state.userInfo.nameFull = userBlob.nameFull;
     state.userInfo.isAdmin = userBlob.isAdmin;
     state.userInfo.role = userBlob.role;
   },
@@ -86,7 +93,7 @@ const actions = {
     }
 
     globalAxios.patch('users/' + userId + '/house.json?auth=' + token, houseBlob)
-    /*creates the house node in the name's node*/
+    /*creates the house node in the nameFull's node*/
       .then(response => {
         let thing = 'fetchActiveHouse';
         dispatch('house/fetchActiveHouse', null, gObj_hasRoot);
@@ -124,7 +131,9 @@ const actions = {
             email: response.data.email,
             id: response.data.id,
             isAdmin: false,
-            name: response.data.name.first + ' ' + response.data.name.last,
+            nameFirst: response.name.first,
+            nameLast: response.name.last,
+            // nameFull: response.data.name.first + ' ' + response.data.name.last,
             role: role
           };
           let thing2 = 'SET_USER_INFO';
@@ -135,7 +144,7 @@ const actions = {
     }
   },
 
-  /* adds to  name object in DB, captures UID */
+  /* adds to  nameFull object in DB, captures UID */
   storeNewUser({commit, state}, payload) {
     console.log('***** STORING NEW USER');
 
@@ -155,9 +164,9 @@ const actions = {
       email: payload.signupData.email,
       userId: payload.authBlob.userId
     };
-    /* stores firebase node-key of new name */
+    /* stores firebase node-key of new nameFull */
 
-    /* 'patch' allows userID as node name :-) */
+    /* 'patch' allows userID as node nameFull :-) */
     globalAxios.patch('users/' + userId + '.json/?auth=' + token, userBlob)
       .then(response => {
         console.log("userModule.storeUser", response)
