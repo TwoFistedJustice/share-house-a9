@@ -1,10 +1,8 @@
 import Vue from 'vue';
-import {store} from './store/store';
 
-// import {mapGetters} from 'vuex';
-//
-// const belongsToHouse = store.state.user.belongsToHouse;
-// const thing = mapGetters ;
+import {store} from './store/store';
+const belongsToHouse = store.state.user.belongsToHouse;
+
 
 // import HomePage from './pages/home.vue';
 import HomePage from './components/structure/Home.vue';
@@ -44,17 +42,18 @@ export default [
     path: '/',
     component: HomePage,
     // async(routeTo, routeFrom, resolve, reject,) {
-    //   if (true) {
-    //     console.log("HOMEPAGE*****vuex value: " + thing);
-    //     resolve({
-    //       component: JoinHouse})
-    //     }
-    //   else
-    //     {
-    //       resolve({
-    //         component: HomePage})
-    //     }
-    //   }
+      // if (belongsToHouse) {
+      //   console.log("belongsToHouse: " + belongsToHouse);
+        // resolve({
+        //   component: JoinHouse})
+        // }
+      // else
+      //   {
+      //     console.log("belongsToHouse: " + belongsToHouse);
+          // resolve({
+          //   component: HomePage})
+        // }
+      // }
   },
 
 

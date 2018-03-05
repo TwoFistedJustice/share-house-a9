@@ -10,8 +10,6 @@ import chores from './modules/choreModule.js';
 Vue.use(Vuex);
 
 
-// const store = new Vuex.Store({
-// export default new Vuex.Store({
 export const store = new Vuex.Store({
   state:{},
   getters:{},
@@ -28,4 +26,4 @@ export const store = new Vuex.Store({
 
 }); // END STORE
 
-// export {store};
+
