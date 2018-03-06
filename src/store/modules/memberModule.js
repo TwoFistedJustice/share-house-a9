@@ -1,5 +1,6 @@
 /*
-* memberModule controls data that can affect users as they relate to a house
+* memberModule controls data that can affect house members as they relate to a house
+* It is essentially for admin use only to manage house members
 * this can affect any user, logged in or not
 * if something can only affect the user who is using the interface, look in userModule
 * */
