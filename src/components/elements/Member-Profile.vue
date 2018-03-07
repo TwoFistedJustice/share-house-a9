@@ -13,13 +13,15 @@
 
       </f7-card-header>
       <f7-card-content>
+        <p>make it a radio list that controls which button to show</p>
         <!-- picture, interests, contact info, emergency contact-->
         <f7-list form>
-          <f7-label>ok to delete</f7-label>
-          <f7-list-item checkbox>
 
-          </f7-list-item>
-          <f7-button v-if="canDelete">delete</f7-button>
+          <f7-list-item title="Kickem out!"
+                    :checked="allowDelete"
+                    @change="allowDelete = $event.target.checked"
+                    checkbox></f7-list-item>
+          <f7-button v-if="allowDelete">bootem!</f7-button>
         </f7-list>
 
       </f7-card-content>
@@ -43,7 +45,7 @@
     data: function () {
       return {
         setClass: true,
-        canDelete: false,
+        allowDelete: false,
         canSeeAdminControls: false,
         memberData: {
           memberId: this.member.id,
