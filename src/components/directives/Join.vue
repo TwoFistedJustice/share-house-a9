@@ -28,7 +28,7 @@
 
           <!-- only the button changes each calls a different function-->
           <f7-input type="text"
-                    placeholder="House nameFull"
+                    placeholder="House name"
                     :value="formData.houseName"
                     v-on:input="formData.houseName =$event.target.value"></f7-input>
 
@@ -52,9 +52,11 @@
           <f7-button small round fill
                      color="gray"
                      v-if="!toJoin && !isformFilled"
-          @click="createHouse">Create a House</f7-button>
+                     @click="createHouse">Create a House</f7-button>
 
-          <f7-button small round fill v-if="toJoin && isformFilled">Join a House</f7-button>
+          <f7-button small round fill
+                     v-if="toJoin && isformFilled"
+                    @click="joinHouseA8">Join a House</f7-button>
           <f7-button small round fill color="gray" v-if="toJoin && !isformFilled">Join a House</f7-button>
 
         </f7-block>
@@ -163,6 +165,20 @@
         this.clearFormData();
       },
 
+      joinHouseA8() {
+        console.log('housename ' + this.houseName)
+        const formData = {
+          houseId: this.formData.houseName
+
+        };
+        // console.clear();
+        // console.log('***********join house button not active yet', this.houseId);
+        let thing = 'addMember';
+        this.$store.dispatch('membership/addMember', formData, gObj_hasRoot);
+
+        this.houseId = '';
+
+      },
 
       joinHouse() {
         // console.clear();

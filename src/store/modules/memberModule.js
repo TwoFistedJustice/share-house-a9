@@ -41,7 +41,7 @@ const actions = {
   //payload needs to get changed so it includes isAdmin: t/f
   //todo refactor to check DB for house nameFull and street
   addMember({dispatch, commit}, payload) {
-    // console.log('adding member');
+    console.log('adding member' + payload.houseId);
 
     /* ****************************
        GET the member data as an array

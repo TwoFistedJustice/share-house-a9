@@ -4,7 +4,7 @@
 
 <script>
     export default {
-        name: "manage--house"
+        name: "manage--members"
     }
 </script>
 

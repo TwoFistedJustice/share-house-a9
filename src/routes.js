@@ -27,6 +27,8 @@ import InventoryList from './components/features/Supplies-Shared.vue';
 
 import JoinHouse from './components/directives/Join.vue';
 
+// MEMBER IMPORTS
+import MemberManagement from './components/directives/Manage-Members.vue';
 
 export default [
   // {path: '',
@@ -141,6 +143,13 @@ export default [
     component:
     SuppliesModify
   },
+
+  {
+    path: '/member-management/',
+    component: MemberManagement,
+
+    },
+
 
 
 

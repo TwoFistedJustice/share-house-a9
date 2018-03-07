@@ -61,6 +61,7 @@
     computed: {
       ...mapGetters({
         isAuthenticated: 'auth/isAuthenticated',
+        getHouseId: 'house/getHouseId',
         getActiveHouse: 'house/getActiveHouse',
         getUserInfo: 'user/getUserInfo',
         getBelongsToHouse: 'user/getBelongsToHouse'
