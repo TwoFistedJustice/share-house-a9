@@ -1,11 +1,14 @@
 import Vue from 'vue';
 
-// import {store} from './store/store';
+// import vuex store
+import store from './store/store';
+console.log(store.state.user);
+console.log("belongsToHouse: " + store.state.user.belongsToHouse);
+let localbelongsToHouse = localStorage.getItem('belongsToHouse');
 
-import {store} from './store/store';
-// let belongsToHouse = store.state.user.belongsToHouse;
 
-
+console.log(store.state.auth);
+console.log("keepMeLoggedIn " + store.state.auth.keepMeLoggedIn);
 
 // import HomePage from './pages/home.vue';
 import HomePage from './components/structure/Home.vue';
@@ -47,37 +50,36 @@ export default [
     path: '/',
     component: HomePage,
 
-    // async(routeTo, routeFrom, resolve, reject,) {
-    //   if (store.state.user.belongsToHouse) {
-    //     console.log("value: " + store.state.user.belongsToHouse);
-    //     resolve({
-    //       component: JoinHouse})
-    //     }
-    //   else
-    //     {
-    //       console.log("value: " + store.state.user.belongsToHouse);
-    //       resolve({
-    //         component: HomePage})
-    //     }
-    //   }
+    async(routeTo, routeFrom, resolve, reject,) {
+      if (localbelongsToHouse) {
+        // console.log("value: " + store.state.user.belongsToHouse);
+        resolve({
+          component: HomePage})
+        }
+      else
+        {
+          // console.log("value: " + store.state.user.belongsToHouse);
+          resolve({
+            component: JoinHouse})
+        }
+      }
   },
 
 
   {
     path: '/join-house/',
     component: JoinHouse,
-    // async(routeTo, routeFrom, resolve, reject) {
-    //   if (belongsToHouse) {
-    //     console.log("JOIN*****vuex value: " + belongsToHouse);
-    //     resolve({
-    //       component: HomePage})
-    //   }
-    //   else
-    //   {
-    //     resolve({
-    //       component: JoinHouse})
-    //   }
-    // }
+    async(routeTo, routeFrom, resolve, reject) {
+      if (!localbelongsToHouse) {
+          resolve({
+          component: JoinHouse})
+      }
+      else
+      {
+        resolve({
+          component: HomePage})
+      }
+    }
   },
 
   // {

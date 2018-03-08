@@ -1,3 +1,4 @@
+
 <template>
   <!-- This should be fairly simple-->
   <!-- Name, picture, Admin?-->
@@ -16,12 +17,30 @@
         <p>make it a radio list that controls which button to show</p>
         <!-- picture, interests, contact info, emergency contact-->
         <f7-list form>
+          <f7-list-item radio name="button-chooser"
+                        checked
+                        value=""
+                        @change="buttonSwitch = $event.target.value"
+                        :title="'Neither'"></f7-list-item>
+          <f7-list-item radio name="button-chooser"
+                        value="bootem"
+                        :checked="buttonSwitch === 'bootem'"
+                        @change="buttonSwitch = $event.target.value"
+                        :title="'Kickem out'"></f7-list-item>
 
-          <f7-list-item title="Kickem out!"
-                    :checked="allowDelete"
-                    @change="allowDelete = $event.target.checked"
-                    checkbox></f7-list-item>
-          <f7-button v-if="allowDelete">bootem!</f7-button>
+          <f7-list-item radio name="button-chooser"
+                        value="powers"
+                        :checked="buttonSwitch === 'powers'"
+                        @change="buttonSwitch = $event.target.value"
+                        :title="'Givem super powers'"></f7-list-item>
+
+
+          <!--<f7-list-item title="Kickem out!"-->
+                    <!--:checked="allowDelete"-->
+                    <!--@change="allowDelete = $event.target.checked"-->
+                    <!--checkbox></f7-list-item>-->
+          <f7-button small round fill color="red"  v-if="buttonSwitch === 'bootem'">Kickem Out!</f7-button>
+          <f7-button small round fill color="green" v-if="buttonSwitch === 'powers'">Make admin</f7-button>
         </f7-list>
 
       </f7-card-content>
@@ -44,6 +63,7 @@
 
     data: function () {
       return {
+        buttonSwitch: '',
         setClass: true,
         allowDelete: false,
         canSeeAdminControls: false,

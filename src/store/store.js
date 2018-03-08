@@ -11,7 +11,11 @@ import chores from './modules/choreModule.js';
 Vue.use(Vuex);
 
 
-export const store = new Vuex.Store({
+// export const store = new Vuex.Store({
+// syntax: import {store} ...
+
+export default new Vuex.Store({
+  // syntax: import store ...
 
   state:{},
   getters:{},

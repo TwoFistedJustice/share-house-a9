@@ -89,6 +89,7 @@
       addToSuppliesList() {
 
         let supply = {item: this.supplyToAdd, have: false, inCart: false};
+        console.log(supply);
 
         this.addSupply(supply);
         this.supplyToAdd = '';

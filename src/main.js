@@ -1,9 +1,13 @@
 // Import Vue
 import Vue from 'vue';
 
+
+
 //Import Axios
 import axios from 'axios';
-import { store } from  './store/store.js';
+// import { store } from  './store/store.js';
+import store  from  './store/store.js';
+
 import {dataBaseUrl} from './config.js';
 axios.defaults.baseURL = dataBaseUrl;
 
