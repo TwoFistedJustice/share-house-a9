@@ -71,12 +71,13 @@
     <f7-popup id="create-house-instructions">
       <f7-view>
         <f7-page v-if="!toJoin">
-          <f7-navbar title="How to create a house">
+          <f7-navbar title="How to">
             <f7-nav-right>
               <f7-link popup-close>Close</f7-link>
             </f7-nav-right>
           </f7-navbar>
           <f7-block strong>
+            <p class="big">Join or Create a House</p>
             <p>Enter the nameFull you have chosen for you house.</p>
 
             <p>You can enter any nameFull you like, even one that has already been used.</p>

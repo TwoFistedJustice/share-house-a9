@@ -30,10 +30,11 @@
     <f7-popup id="shopping-list-instructions">
       <f7-view>
         <f7-page>
-          <f7-navbar title="How to use the shopping list">
+          <f7-navbar title="How to">
             <f7-nav-right>
               <f7-link popup-close>Close</f7-link>
             </f7-nav-right>
+            <p class="big">Shopping List</p>
           </f7-navbar>
 
           <p>You can move between supply features either by swiping or

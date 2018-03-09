@@ -47,6 +47,10 @@ const getters = {
     return state.houseId;
   },
 
+  getHouseName(state) {
+    return state.activeHouse.houseName;
+  },
+
   getMembers(state) {
     return state.activeHouse.members;
   },

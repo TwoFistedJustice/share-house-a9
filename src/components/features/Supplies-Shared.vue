@@ -25,11 +25,12 @@
       <f7-popup id="inventory-list-instructions">
         <f7-view>
           <f7-page>
-            <f7-navbar title="How to use the inventory list">
+            <f7-navbar title="How to use">
               <f7-nav-right>
                 <f7-link popup-close>Close</f7-link>
               </f7-nav-right>
             </f7-navbar>
+            <p class="big">Inventory List</p>
             <p>You can move between supply features either by swiping or
               by using the toolbar on the bottom of the screen</p>
             <p>Click an item when you run out.</p>

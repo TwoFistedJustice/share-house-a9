@@ -39,11 +39,12 @@
     <f7-popup id="supplies-modify-instructions">
       <f7-view>
         <f7-page>
-          <f7-navbar title="How to use the inventory list">
+          <f7-navbar title="How to">
             <f7-nav-right>
               <f7-link popup-close>Close</f7-link>
             </f7-nav-right>
           </f7-navbar>
+          <p class="big">Modify Supply List</p>
           <p>You can move between supply features either by swiping or
             by using the toolbar on the bottom of the screen</p>
           <p>To add a new supply, enter it into the box and press the Add Supply button</p>
