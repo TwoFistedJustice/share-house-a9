@@ -7,19 +7,19 @@
         <f7-button small round raised color="orange" popup-open="#manage-members-instructions">How To</f7-button>
       </f7-nav-right>
     </f7-navbar>
-    <!--<f7-toolbar tabbar scrollable bottom-md labels>-->
+    <f7-toolbar tabbar scrollable bottom-md labels>
     <!--<f7-toolbar tabbar bottom-md labels>-->
-      <!--<f7-link v-for="(member, index) in getActiveHouse.members"-->
-               <!--:key="member.id"-->
-               <!--:member="member"-->
-                <!--:tab-link="'#tab' + index" >{{member.nameFirst}} {{member.nameLast}}</f7-link>-->
+      <f7-link v-for="(member, index) in getActiveHouse.members"
+               :key="member.id + index"
+               :member="member"
+                :tab-link="'#tab' + index" >{{member.nameFirst}}<br>{{member.nameLast}}</f7-link>
 
-    <!--</f7-toolbar>-->
+    </f7-toolbar>
 
     <f7-tabs swipeable data-loop="true">
 
       <f7-tab v-for="(member, index) in getActiveHouse.members"
-              :key="member.id"
+              :key="member.id + index"
               :id="'tab' + index">
         <member-profiles-sh :member="member" ></member-profiles-sh>
       </f7-tab>

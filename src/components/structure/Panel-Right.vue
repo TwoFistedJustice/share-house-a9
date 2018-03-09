@@ -14,6 +14,7 @@
     <!--<f7-block-title>Load page in main view</f7-block-title>-->
     <f7-list>
       <f7-list-item link="/join-house/" title="Join House" view="#main-view" panel-close></f7-list-item>
+      <f7-list-item link="/house-management/" title="Manage house details" view="#main-view" panel-close></f7-list-item>
       <f7-list-item link="/member-management/" title="Manage membership" view="#main-view" panel-close></f7-list-item>
       <f7-list-item link="/form/" title="Form" view="#main-view" panel-close></f7-list-item>
     </f7-list>

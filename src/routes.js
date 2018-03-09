@@ -30,8 +30,10 @@ import InventoryList from './components/features/Supplies-Shared.vue';
 
 import JoinHouse from './components/directives/Join.vue';
 
-// MEMBER IMPORTS
+// ADMIN IMPORTS
 import MemberManagement from './components/directives/Manage-Members.vue';
+import HouseManagement from './components/directives/Manage-House.vue';
+
 
 export default [
   // {path: '',
@@ -146,12 +148,20 @@ export default [
     SuppliesModify
   },
 
+
+  // ADMIN ROUTES
+
   {
     path: '/member-management/',
     component: MemberManagement,
 
     },
 
+  {
+    path: '/house-management/',
+    component: HouseManagement,
+
+    },
 
 
 
