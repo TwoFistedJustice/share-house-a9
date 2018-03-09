@@ -17,8 +17,8 @@
       </f7-row>
       </f7-block>
 
-    <inventory-item v-for="supply in getSupplies"
-               :key="supply.item"
+    <inventory-item v-for="(supply, index) in getSupplies"
+               :key="supply.item + index"
                :supply="supply"></inventory-item>
 
 

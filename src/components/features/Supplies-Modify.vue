@@ -2,7 +2,9 @@
   <f7-page>
     <f7-navbar title="Supplies Modify" back-link="Close">
       <f7-nav-right>
-        <f7-button small round raised color="orange" popup-open="#supplies-modify-instructions">How To</f7-button>
+        <f7-button small round raised
+                   color="orange"
+                   popup-open="#supplies-modify-instructions">How To</f7-button>
       </f7-nav-right>
     </f7-navbar>
     <f7-block-title>Modify Supplies</f7-block-title>
@@ -31,7 +33,7 @@
 
 
     <item-modify v-for="(supply, index) in getSupplies"
-                 :key="supply.item"
+                 :key="supply.item + index"
                  :supply="supply"
                  :index="index"></item-modify>
 

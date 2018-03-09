@@ -21,8 +21,8 @@
       </f7-row>
     </f7-block>
 
-    <shopping-item v-for="supply in getSupplies"
-                   :key="supply.item"
+    <shopping-item v-for="(supply, index) in getSupplies"
+                   :key="supply.item + index"
                    :supply="supply"
                    v-if="!supply.have"></shopping-item>
 
