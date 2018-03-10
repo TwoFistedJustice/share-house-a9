@@ -1,4 +1,3 @@
-
 <template>
   <!-- This should be fairly simple-->
   <!-- Name, picture, Admin?-->
@@ -26,21 +25,46 @@
                         value="bootem"
                         :checked="buttonSwitch === 'bootem'"
                         @change="buttonSwitch = $event.target.value"
-                        :title="'Kickem out'"></f7-list-item>
+                        :title="'Leave house'"
+          ></f7-list-item>
 
           <f7-list-item radio name="button-chooser"
                         value="powers"
                         :checked="buttonSwitch === 'powers'"
                         @change="buttonSwitch = $event.target.value"
-                        :title="'Givem super powers'"></f7-list-item>
+                        :title="'Change admin status'"
+                        v-if=" isSelfAdmin"></f7-list-item>
+
+          <!--<f7-list-item radio name="button-chooser"-->
+          <!--v-if="isSelf"-->
+          <!--value="adminPowerTake"-->
+          <!--:checked="buttonSwitch === 'adminPowerTake'"-->
+          <!--@change="buttonSwitch = $event.target.value"-->
+          <!--:title="'Give up admin power'"></f7-list-item>-->
 
 
           <!--<f7-list-item title="Kickem out!"-->
-                    <!--:checked="allowDelete"-->
-                    <!--@change="allowDelete = $event.target.checked"-->
-                    <!--checkbox></f7-list-item>-->
-          <f7-button small round fill color="red"  v-if="buttonSwitch === 'bootem'">Kickem Out!</f7-button>
-          <f7-button small round fill color="green" v-if="buttonSwitch === 'powers'">Make admin</f7-button>
+          <!--:checked="allowDelete"-->
+          <!--@change="allowDelete = $event.target.checked"-->
+          <!--checkbox></f7-list-item>-->
+          <f7-button small round fill
+                     color="red"
+                     v-if="buttonSwitch === 'bootem'"
+                     @click="bootToRear">Leave House
+          </f7-button>
+
+          <f7-button small round fill
+                     color="green"
+                     v-if="buttonSwitch === 'powers' && !isAdmin"
+                     @click="adminPowerGive">Make admin
+          </f7-button>
+
+          <f7-button small round fill
+                     color="red"
+                     v-if="buttonSwitch === 'powers' && isAdmin && isSelf"
+                     @click="adminPowerTake"
+          >Give up Admin power
+          </f7-button>
         </f7-list>
 
       </f7-card-content>
@@ -83,6 +107,7 @@
       }),
 
       canLeave() {
+        //this might belong in the manage house component
         /*
         * If the user is and admin, but not the only admin
         * or the user is the member and not an admin
@@ -112,35 +137,33 @@
         }
       },
 
-      isSelf(){
+      isSelf() {
         let memberId = this.member.id;
         let userId = this.getUserId;
 
-        let condition = (memberId === userId && !this.isOnlyAdmin )? true : false;
+        let condition = (memberId === userId && !this.isOnlyAdmin) ? true : false;
         return condition;
 
       },
 
-      showAdminControls(){
-        /* user shouldn't see admin controls on their own component
-        *  non-admins should never see admin controls ever
-        *
-        *  maybe have another set of control for self-admin - like give up admin power
-        * */
-        let isAdmin = this.isAdmin;
-        let memberId = this.member.id;
-        let userId = this.getUserId;
-
-        // if(memberId === userId){
-        //   return false
-        // } else
-        if (isAdmin && !this.memberData.isAdmin) {
+      isSelfAdmin(){
+          /*
+          * if user is an admin, can see own admin control
+          * can see non-admins admin control
+          * can not see admin control on other admins
+          * */
+        if (this.isSelf && this.isAdmin ) {
           return true;
+
+        } else if (!this.memberData.memberIsAdmin){
+          return true;
+
         } else {
           return false;
         }
-      }
 
+
+      }
 
     },
     methods: {
@@ -149,20 +172,16 @@
         this.$store.dispatch('membership/removeMember', this.member, gObj_hasRoot);
       },
 
-      adminPowerGive(){
+      adminPowerGive() {
         let thing = 'adminPowerGive';
         this.$store.dispatch('membership/adminPowerGive', this.member, gObj_hasRoot);
       },
 
-      adminPowerTake(){
+      adminPowerTake() {
         let thing = 'adminPowerTake';
         this.$store.dispatch('membership/adminPowerTake', this.member, gObj_hasRoot);
       },
 
-      testFn() {
-        console.log('testFn in Member.vue');
-
-      }
 
     }
 
