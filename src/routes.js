@@ -2,13 +2,20 @@ import Vue from 'vue';
 
 // import vuex store
 import store from './store/store';
-console.log(store.state.user);
-console.log("belongsToHouse: " + store.state.user.belongsToHouse);
+
+
+// console.log(thing);
+// console.log("belongsToHouse: " + store.state.user.belongsToHouse);
 let localbelongsToHouse = localStorage.getItem('belongsToHouse');
 
+// import {store.state.user.belongsToHouse} from './store/store';
 
-console.log(store.state.auth);
-console.log("keepMeLoggedIn " + store.state.auth.keepMeLoggedIn);
+
+
+// console.log('belongs: ' + shBelongs);
+// console.log(shBelongs.getters);
+// console.log(store.state.auth);
+// console.log("keepMeLoggedIn " + store.state.auth.keepMeLoggedIn);
 
 // import HomePage from './pages/home.vue';
 import HomePage from './components/structure/Home.vue';

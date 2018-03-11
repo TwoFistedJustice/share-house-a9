@@ -36,7 +36,7 @@
       v-if="isAuthenticated"
       strong>
       <p>structure/Home.vue</p>
-      <p class="big">Welcome home {{getUserInfo.nameFirst}}!</p>
+      <p class="sh-big">Welcome home {{getUserInfo.nameFirst}}!</p>
       <!--<p>if user.belongsToHouse is false....</p>-->
       <!--<b><p>if not a member display join or create</p></b>-->
       <p>Your House Job this week is: Get Shit Done!</p>

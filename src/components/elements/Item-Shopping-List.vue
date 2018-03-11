@@ -1,7 +1,7 @@
 <template>
   <div @click="flipBool">
     <f7-block >
-      <f7-card  class='supply-item'
+      <f7-card  class='sh-supply-item'
                 v-bind:bg-color="toggleColor">
         <f7-card-content >
           <p v-if="!supply.inCart">{{supply.item}}</p>

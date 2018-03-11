@@ -2,12 +2,12 @@
   <!--<f7-page>-->
   <div @click="flip">
     <f7-block>
-      <f7-card  class='supply-item'
+      <f7-card  class='sh-supply-item'
                 v-bind:bg-color="toggleColor">
         <f7-card-content>
-          <p class="big">{{supply.item}}</p>
-          <p class="small" v-if="supply.have"> We have this.</p>
-          <p class="small"  v-if="!supply.have"> We need this.</p>
+          <p class="sh-big">{{supply.item}}</p>
+          <p class="sh-small" v-if="supply.have"> We have this.</p>
+          <p class="sh-small" v-if="!supply.have"> We need this.</p>
         </f7-card-content>
 
 

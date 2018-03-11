@@ -7,9 +7,9 @@
     <f7-card>
       <f7-card-header>
         <!--name and contact info & house job-->
-        <p class="big">{{member.nameFirst}} {{member.nameLast}}</p>
+        <p class="sh-big">{{member.nameFirst}} {{member.nameLast}}</p>
 
-        <p class="small"> {{member.role}}</p>
+        <p class="sh-small"> {{member.role}}</p>
 
       </f7-card-header>
       <f7-card-content>

@@ -6,7 +6,8 @@
                back-link="Close">
       <f7-nav-right>
         <f7-button small round raised
-                   color="orange"
+                   class = 'sh-how-to'
+
                    popup-open="#manage-members-instructions">How To</f7-button>
       </f7-nav-right>
     </f7-navbar>
@@ -44,7 +45,7 @@
               <f7-link popup-close>Close</f7-link>
             </f7-nav-right>
           </f7-navbar>
-          <p class="big">Manage Members</p>
+          <p class="sh-big">Manage Members</p>
           <p>You can move between members either by swiping or
             by using the toolbar on the bottom of the screen</p>
 

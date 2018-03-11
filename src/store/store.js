@@ -8,6 +8,10 @@ import membership from './modules/memberModule.js';
 import profile from './modules/profileModule.js';
 import supply from './modules/supplyModule.js';
 import chores from './modules/choreModule.js';
+
+export function shBelongs(){
+  return getBelongsToHouse;
+}
 Vue.use(Vuex);
 
 

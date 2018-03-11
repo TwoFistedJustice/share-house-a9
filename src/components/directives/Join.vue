@@ -77,7 +77,7 @@
             </f7-nav-right>
           </f7-navbar>
           <f7-block strong>
-            <p class="big">Join or Create a House</p>
+            <p class="sh-big">Join or Create a House</p>
             <p>Enter the nameFull you have chosen for you house.</p>
 
             <p>You can enter any nameFull you like, even one that has already been used.</p>

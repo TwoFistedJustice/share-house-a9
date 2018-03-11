@@ -2,7 +2,10 @@
   <f7-page>
     <f7-navbar title="Shared Supplies" back-link="Close">
       <f7-nav-right>
-        <f7-button small round raised color="orange" popup-open="#inventory-list-instructions">How To</f7-button>
+        <f7-button small round raised
+                   class="sh-how-to"
+                   color="orange"
+                   popup-open="#inventory-list-instructions">How To</f7-button>
       </f7-nav-right>
     </f7-navbar>
 
@@ -31,7 +34,7 @@
               <f7-link popup-close>Close</f7-link>
             </f7-nav-right>
           </f7-navbar>
-          <p class="big">Inventory List</p>
+          <p class="sh-big">Inventory List</p>
           <p>You can move between supply features either by swiping or
             by using the toolbar on the bottom of the screen</p>
           <p>Click an item when you run out.</p>

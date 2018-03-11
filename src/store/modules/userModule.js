@@ -10,6 +10,8 @@ import globalAxios from 'axios';
 
 import {APIkey, gObj_hasRoot} from '../../config.js';
 
+// export {belongsToHouse};
+
 /* USER DATA THAT DOES NOT BELONG TO AUTH GOES HERE
 *   nicknames, user settings, etc.
 *

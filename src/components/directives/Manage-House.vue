@@ -3,7 +3,10 @@
   <f7-page>
     <f7-navbar title="House Details" back-link="Close">
       <f7-nav-right>
-        <f7-button small round raised color="orange" popup-open="#manage-house-details">How To</f7-button>
+        <f7-button small round raised
+                   class="sh-how-to"
+                   color="orange"
+                   popup-open="#manage-house-details">How To</f7-button>
       </f7-nav-right>
     </f7-navbar>
 
@@ -11,7 +14,7 @@
       <f7-block-title>{{getHouseName}} </f7-block-title>
       <f7-block>
         <!--checkbox to show form - via superPowers boolean-->
-        <p class="big">I want to</p>
+        <p class="sh-big">I want to</p>
         <f7-list form>
 
           <!--<f7-list-item checkbox-->
@@ -47,7 +50,7 @@
     <f7-block>
       <f7-list form>
         <div v-if="superPower === 'changeName'">
-          <f7-label><p class="small">Change House Name</p></f7-label>
+          <f7-label><p class="sh-small">Change House Name</p></f7-label>
           <f7-input type="text"
                     placeholder="Enter new house name"
                     :value="newHouseName"
@@ -80,7 +83,7 @@
               <f7-link popup-close>Close</f7-link>
             </f7-nav-right>
           </f7-navbar>
-          <p class="big">Manage House Details</p>
+          <p class="sh-big">Manage House Details</p>
           <p>Some words</p>
 
         </f7-page>

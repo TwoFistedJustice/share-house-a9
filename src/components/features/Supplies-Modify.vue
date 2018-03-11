@@ -3,6 +3,7 @@
     <f7-navbar title="Supplies Modify" back-link="Close">
       <f7-nav-right>
         <f7-button small round raised
+                   class="sh-how-to"
                    color="orange"
                    popup-open="#supplies-modify-instructions">How To</f7-button>
       </f7-nav-right>
@@ -46,7 +47,7 @@
               <f7-link popup-close>Close</f7-link>
             </f7-nav-right>
           </f7-navbar>
-          <p class="big">Modify Supply List</p>
+          <p class="sh-big">Modify Supply List</p>
           <p>You can move between supply features either by swiping or
             by using the toolbar on the bottom of the screen</p>
           <p>To add a new supply, enter it into the box and press the Add Supply button</p>
