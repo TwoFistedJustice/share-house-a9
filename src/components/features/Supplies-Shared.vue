@@ -11,41 +11,40 @@
         <f7-col desktop-width="10" tablet-width="50">
           <f7-button small round raised
                      color="blue"
-                     @click="switchAllHaveStatus">We {{haveNeedText}} it all!</f7-button>
+                     @click="switchAllHaveStatus">We {{haveNeedText}} it all!
+          </f7-button>
         </f7-col>
 
       </f7-row>
-      </f7-block>
+    </f7-block>
 
     <inventory-item v-for="(supply, index) in getSupplies"
-               :key="supply.item + index"
-               :supply="supply"></inventory-item>
+                    :key="supply.item + index"
+                    :supply="supply"></inventory-item>
 
 
-      <f7-popup id="inventory-list-instructions">
-        <f7-view>
-          <f7-page>
-            <f7-navbar title="How to use">
-              <f7-nav-right>
-                <f7-link popup-close>Close</f7-link>
-              </f7-nav-right>
-            </f7-navbar>
-            <p class="big">Inventory List</p>
-            <p>You can move between supply features either by swiping or
-              by using the toolbar on the bottom of the screen</p>
-            <p>Click an item when you run out.</p>
-            <p>Green means you have it. </p>
-            <p>Red means you have run out. </p>
-            <p>Everything that has been "bought"  in the shopping list will turn green here.</p>
-            <p>clicking the "Change All" button switches every item to the opposite color</p>
+    <f7-popup id="inventory-list-instructions">
+      <f7-view>
+        <f7-page>
+          <f7-navbar title="How to use">
+            <f7-nav-right>
+              <f7-link popup-close>Close</f7-link>
+            </f7-nav-right>
+          </f7-navbar>
+          <p class="big">Inventory List</p>
+          <p>You can move between supply features either by swiping or
+            by using the toolbar on the bottom of the screen</p>
+          <p>Click an item when you run out.</p>
+          <p>Green means you have it. </p>
+          <p>Red means you have run out. </p>
+          <p>Everything that has been "bought" in the shopping list will turn green here.</p>
+          <p>clicking the "Change All" button switches every item to the opposite color</p>
 
-          </f7-page>
-        </f7-view>
-      </f7-popup>
+        </f7-page>
+      </f7-view>
+    </f7-popup>
 
   </f7-page>
-
-
 
 
 </template>

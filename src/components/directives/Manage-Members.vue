@@ -11,12 +11,17 @@
       </f7-nav-right>
     </f7-navbar>
     <!--<f7-toolbar tabbar scrollable bottom-md labels>-->
-      <!--<f7-link v-for="(member, index) in getActiveHouse.members"-->
-               <!--:key="member.id + index"-->
-               <!--:member="member"-->
-                <!--:tab-link="'#tab' + index" >{{member.nameFirst}}<br>{{member.nameLast}}</f7-link>-->
+    <!--<f7-toolbar tabbar scrollable>-->
+    <f7-toolbar tabbar scrollable>
 
-    <!--</f7-toolbar>-->
+      <f7-link v-for="(member, index) in getActiveHouse.members"
+               :key="member.id + index"
+               :member="member"
+               :tab-link="'#tab' + index"
+               :tab-link-active="index === 0">{{member.nameFirst}} {{member.nameLast}}</f7-link>
+
+
+    </f7-toolbar>
 
     <f7-tabs swipeable
              data-loop="true">
