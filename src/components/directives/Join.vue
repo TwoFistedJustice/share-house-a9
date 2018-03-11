@@ -59,6 +59,8 @@
                     @click="joinHouseA8">Join a House</f7-button>
           <f7-button small round fill color="gray" v-if="toJoin && !isformFilled">Join a House</f7-button>
 
+          <f7-button @click="onLogout">Log out</f7-button>
+
         </f7-block>
 
 
@@ -196,6 +198,9 @@
         this.formData.street = '';
         this.formData.city = '';
         this.formData.country = '';
+      },
+      onLogout() {
+        this.$store.dispatch('auth/logout', null, gObj_hasRoot);
       }
     }
 

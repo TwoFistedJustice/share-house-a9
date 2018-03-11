@@ -35,18 +35,6 @@
                         :title="'Change admin status'"
                         v-if=" isSelfAdmin"></f7-list-item>
 
-          <!--<f7-list-item radio name="button-chooser"-->
-          <!--v-if="isSelf"-->
-          <!--value="adminPowerTake"-->
-          <!--:checked="buttonSwitch === 'adminPowerTake'"-->
-          <!--@change="buttonSwitch = $event.target.value"-->
-          <!--:title="'Give up admin power'"></f7-list-item>-->
-
-
-          <!--<f7-list-item title="Kickem out!"-->
-          <!--:checked="allowDelete"-->
-          <!--@change="allowDelete = $event.target.checked"-->
-          <!--checkbox></f7-list-item>-->
           <f7-button small round fill
                      color="red"
                      v-if="buttonSwitch === 'bootem'"
@@ -121,8 +109,6 @@
 
         if (memberId === userId && !isAdmin) {
           return true;
-          // } else if (memberId === userId && isAdmin && !this.isOnlyAdmin) {
-          //   return true;
         } else {
           return false;
         }

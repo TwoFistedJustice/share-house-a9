@@ -89,6 +89,11 @@ const mutations = {
     })
   },
 
+  CLEAR_SUPPLIES(state){
+    /* clears supplies - commit from auth/logout*/
+    state.supplies = [];
+  },
+
   DELETE_ITEM(state, index) {
     /* expects the array index of the item to be deleted
     * Deletes a supply object at that index */

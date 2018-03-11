@@ -147,6 +147,8 @@ const actions = {
     commit('house/CLEAR_HOUSE_DATA', null, gObj_hasRoot);
     commit('user/CLEAR_USER_DATA', null, gObj_hasRoot);
     commit('user/CLEAR_USER_NAME', null, gObj_hasRoot);
+    commit('supply/CLEAR_SUPPLIES', null, gObj_hasRoot);
+    commit('membership/CLEAR_MEMBER_STATE', null, gObj_hasRoot);
     localStorage.clear();
     //TODO router call sign-in
     // router.replace('/signin');

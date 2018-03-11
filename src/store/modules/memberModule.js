@@ -10,6 +10,8 @@ import globalAxios from 'axios';
 //TODO deprecated vue-router import - change to 'routes.js'
 // import router from '../../router.js';
 
+import f7Router from '../../routes.js';
+
 import {APIkey, gObj_hasRoot} from '../../config.js';
 
 const state = {
@@ -28,6 +30,11 @@ const getters = {
 };
 
 const mutations = {
+  CLEAR_MEMBER_STATE(state){
+    /* clears counts - commit from auth/logout*/
+    state.adminCount = null;
+    state.memberCount = null;
+  },
   SET_ADMIN_COUNT(state, count) {
     state.adminCount = count;
   },
@@ -140,6 +147,7 @@ const actions = {
     let houseId = localStorage.getItem('houseId');
     let token = localStorage.getItem('token');
     let userId = localStorage.getItem('userId');
+    let memberName = memberData.nameFirst + ' ' + memberData.nameLast;
 
     /* if member is not an admin, it's okay to remove them */
     /* if admins & members both count at least two, removal is okay */
@@ -150,7 +158,7 @@ const actions = {
     /* Remove the member if canLeave is true */
     if (canRemove) {
 
-      let isReallySure = confirm('Are you sure you want to remove ' + memberData.nameFull + '?');
+      let isReallySure = confirm('Are you sure you want to remove ' + memberName + '?');
       if (isReallySure) {
 
         globalAxios.delete('/houses/' + houseId + '/members/' + memberId + '.json?auth=' + token)
@@ -173,6 +181,7 @@ const actions = {
               commit('user/CLEAR_USER_DATA', null, gObj_hasRoot);
               commit('house/CLEAR_HOUSE_DATA', null, gObj_hasRoot);
             }
+            // f7Router.refreshPage();
           })
           .catch(err => console.error(err));
       }
