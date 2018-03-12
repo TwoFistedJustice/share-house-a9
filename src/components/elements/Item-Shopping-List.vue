@@ -30,7 +30,7 @@
     },
     methods: {
       ...mapActions({
-        changeItemBoolStatus: 'supply/flipBool',
+        // changeItemBoolStatus: 'supply/flipBool',
         saveSupplies: 'supply/saveSupply'
       }),
 
@@ -38,7 +38,7 @@
         this.supply.inCart = !this.supply.inCart;
         let thing = 'saveSupply';
         this.saveSupplies('ShoppingItem.vue flipBool  ');
-        // this.$store.dispatch('supply/saveSupply', null, gObj_hasRoot);
+
       }
 
     }

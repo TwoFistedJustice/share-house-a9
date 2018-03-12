@@ -93,7 +93,9 @@ const actions = {
         let thing3 = 'fetchActiveHouse';
         dispatch('auth/setLocalStorage', response.data, gObj_hasRoot);
         dispatch('auth/logoutTimer', response.data.expiresIn, gObj_hasRoot);
-        dispatch('house/fetchActiveHouse', null, gObj_hasRoot);
+
+        // dispatch('house/fetchActiveHouse', null, gObj_hasRoot); //moved into init module
+
 //TODO router call dashboard
 //         router.replace('/dashboard');
 

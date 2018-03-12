@@ -374,7 +374,7 @@ const actions = {
       * app overwrites existing data with empty objects. */
 
       globalAxios.patch('houses/' + pushId + '.json/?auth=' + token, {okayToPost: true})
-        .then(resp => console.log('okayToPost' + resp))
+        .then(resp => console.log('setting DB.okayToPost' + resp))
         .catch(err => console.error('instantiateHouse okayToPost fail', err));
 
 

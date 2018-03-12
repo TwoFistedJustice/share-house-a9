@@ -1,6 +1,6 @@
 <template>
   <!--<f7-page>-->
-  <div @click="flip">
+  <div @click="flipBool">
     <f7-block>
       <f7-card  class='sh-supply-item'
                 v-bind:bg-color="toggleColor">
@@ -20,6 +20,9 @@
 </template>
 
 <script>
+  import {mapActions} from 'vuex';
+  // import {gObj_hasRoot} from "../../config";
+
   export default {
     props: ['supply'],
     computed: {
@@ -33,8 +36,16 @@
       }
     },
     methods: {
-      flip(){
+      ...mapActions({
+        changeItemBoolStatus: 'supply/flipBool',
+        saveSupplies: 'supply/saveSupply'
+      }),
+
+      flipBool(){
         this.supply.have = !this.supply.have;
+        let thing = 'saveSupply';
+        this.saveSupplies('ShoppingItem.vue flipBool  ');
+
       }
     }
 

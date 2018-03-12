@@ -27,7 +27,7 @@ const state = {
   /* okayToPost is requested at app creation. If it returns anything but true, you can't save data
       * this is because sometimes at creation the server responds more slowly than the app reacts and the
       * app overwrites existing data with empty objects. Originally set in house/instantiateHouse  */
-  okayToPost: null
+  // okayToPost: null
 
 
 }; //END STATE
@@ -215,6 +215,7 @@ const actions = {
     globalAxios.get('houses/' + houseId + '/supplies.json?auth=' + token)
       .then(resp => {
         console.log('fetchSupply', resp.data);
+        console.log('fetchSupply', resp.status);
         return resp.data;
       })
       .then(data => {
@@ -239,19 +240,20 @@ const actions = {
   /* for NOW this is to help prevent supply overwrites at startup
   *  if it works, make a general feature and apply it widely
   * */
-  initSupply({dispatch, commit, state}) {
-
-    let token = localStorage.getItem('token');
-    let houseId = localStorage.getItem('houseId');
-
-    globalAxios.get('houses/' + houseId + '/okayToPost.json?auth=' + token)
-      .then(resp => {
-        console.log('okay to post set to '+ resp.data);
-        state.okayToPost = resp.data;
-
-      })
-      .catch(err => console.error(err));
-  },
+  // initSupply({dispatch, commit, state}) {
+  //
+  //   let token = localStorage.getItem('token');
+  //   let houseId = localStorage.getItem('houseId');
+  //
+  //   globalAxios.get('houses/' + houseId + '/okayToPost.json?auth=' + token)
+  //     .then(resp => {
+  //       console.log('okay to post set to '+ resp.data);
+  //
+  //       state.okayToPost = resp.data;
+  //
+  //     })
+  //     .catch(err => console.error(err));
+  // },
 
   /* dispatched from beforeDestroy in supply display components */
   saveSupply({commit, rootGetters}, name) {
@@ -261,7 +263,9 @@ const actions = {
     *   it works
     * */
       //this block of lets is for debugging
-    let houseName = rootGetters['house/getActiveHouse'].houseName;
+    // let houseName = rootGetters['house/getActiveHouse'].houseName;  //for testing
+    let okayToPost = rootGetters['initSh/isDbResponding'];
+
     let timeStamp = Date.now();
     let now = timeStamp.toString();
     // end debug lets
@@ -270,12 +274,13 @@ const actions = {
     let token = localStorage.getItem('token');
 
 
-    // if (houseName === "Christmas Town") {
+    // if (houseName === "Christmas Town") {  //for testing
 
-      if (state.okayToPost === true) {
+      // if (state.okayToPost === true) {  //old version
+      if (okayToPost === true) {
         globalAxios.put('houses/' + houseId + '/supplies.json?auth=' + token, state.supplies)
           .then(function () {
-            state.fireBaseWrites.push(now);
+            // state.fireBaseWrites.push(now);
             console.log('putting supplies from ' + name, now);
           })
           .catch(error => {

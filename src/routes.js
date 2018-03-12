@@ -58,18 +58,21 @@ export default [
   {
     path: '/',
     component: HomePage,
-
+    /* false sends user to go JoinHouse
+    *  any other value sends user to HomePage
+    *  this is necessary, otherwise if you are logged out
+    *  it sends you to JoinHouse*/
     async(routeTo, routeFrom, resolve, reject,) {
-      if (localbelongsToHouse) {
+      if (localbelongsToHouse === false) {
         // console.log("value: " + store.state.user.belongsToHouse);
         resolve({
-          component: HomePage})
+          component: JoinHouse})
         }
       else
         {
           // console.log("value: " + store.state.user.belongsToHouse);
           resolve({
-            component: JoinHouse})
+            component: HomePage})
         }
       }
   },
@@ -79,7 +82,7 @@ export default [
     path: '/join-house/',
     component: JoinHouse,
     async(routeTo, routeFrom, resolve, reject) {
-      if (!localbelongsToHouse) {
+      if (localbelongsToHouse === false) {
           resolve({
           component: JoinHouse})
       }
