@@ -7,6 +7,7 @@ import Vue from 'vue';
 import axios from 'axios';
 // import { store } from  './store/store.js';
 import store  from  './store/store.js';
+import {gObj_hasRoot} from './config.js';
 
 import {dataBaseUrl} from './config.js';
 axios.defaults.baseURL = dataBaseUrl;
@@ -45,6 +46,12 @@ new Vue({
     theme: 'auto', // Automatic theme detection
     // App routes
     routes: Routes,
+    on: {
+      init: function () {
+        console.log('*******initializing F7 app');
+        store.dispatch('initSh/initDataBase', null, gObj_hasRoot);
+      }
+    }
   },
   // Register App Component
   components: {

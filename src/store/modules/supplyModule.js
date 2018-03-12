@@ -27,7 +27,7 @@ const state = {
   /* okayToPost is requested at app creation. If it returns anything but true, you can't save data
       * this is because sometimes at creation the server responds more slowly than the app reacts and the
       * app overwrites existing data with empty objects. Originally set in house/instantiateHouse  */
-  // okayToPost: null
+  // okayToPost: null //deprecated in favor of initializationModule
 
 
 }; //END STATE
@@ -240,6 +240,8 @@ const actions = {
   /* for NOW this is to help prevent supply overwrites at startup
   *  if it works, make a general feature and apply it widely
   * */
+  //deprecated in favor of initializationModule
+
   // initSupply({dispatch, commit, state}) {
   //
   //   let token = localStorage.getItem('token');

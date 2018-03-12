@@ -3,6 +3,7 @@
 * */
 
 import globalAxios from 'axios';
+import router from '../../routes.js';
 
 import {APIkey, gObj_hasRoot} from '../../config.js';
 
@@ -78,6 +79,7 @@ const actions = {
           console.log('**********dataBase bool set')
       dispatch('house/fetchActiveHouse', null, gObj_hasRoot);
       dispatch('supply/fetchSupply', null, gObj_hasRoot);
+
     }else{
       //check the DB again
       dispatch('initDataBase');

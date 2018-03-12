@@ -3,7 +3,7 @@
 import authAxios from '../../axios/axios-auth.js';
 
 //TODO deprecated vue-router import - change to 'routes.js'
-import router from '../../router.js';
+// import router from '../../router.js';
 
 
 
@@ -90,9 +90,10 @@ const actions = {
 
         let thing1 = 'setLocalStorage';
         let thing2 = 'logoutTimer';
-        let thing3 = 'fetchActiveHouse';
+        let thing3 = 'initDataBase';
         dispatch('auth/setLocalStorage', response.data, gObj_hasRoot);
         dispatch('auth/logoutTimer', response.data.expiresIn, gObj_hasRoot);
+        dispatch('initSh/initDataBase', null, gObj_hasRoot);
 
         // dispatch('house/fetchActiveHouse', null, gObj_hasRoot); //moved into init module
 
@@ -211,7 +212,8 @@ const actions = {
           localId: response.data.user_id
 
         }, gObj_hasRoot);
-        dispatch('house/fetchActiveHouse', null, gObj_hasRoot);
+        dispatch('initSh/initDataBase', null, gObj_hasRoot);
+        // dispatch('house/fetchActiveHouse', null, gObj_hasRoot);
       })
       .catch(error => console.error('refresh: ', error));
   },

@@ -2,6 +2,7 @@ import Vue from 'vue';
 
 // import vuex store
 import store from './store/store';
+import {gObj_hasRoot} from './config.js';
 
 
 // console.log(thing);
@@ -70,6 +71,9 @@ export default [
         }
       else
         {
+
+          //can I dispatch action?
+          store.dispatch('initSh/initDataBase', null, gObj_hasRoot);
           // console.log("value: " + store.state.user.belongsToHouse);
           resolve({
             component: HomePage})
@@ -132,8 +136,8 @@ export default [
 
   {
     path: '/supplies/',
-    component:
-    SupplyTabs
+    component: SupplyTabs,
+
   },
 
 
