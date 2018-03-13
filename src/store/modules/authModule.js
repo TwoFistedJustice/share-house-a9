@@ -1,10 +1,4 @@
-
-// import globalAxios from 'axios';
 import authAxios from '../../axios/axios-auth.js';
-
-//TODO deprecated vue-router import - change to 'routes.js'
-// import router from '../../router.js';
-
 
 
 /* gObj_hasRoot looks like {root: true}, is for vuex namespacing*/
@@ -62,9 +56,6 @@ const actions = {
         };
         let thing = 'storeNewUser';
         dispatch('user/storeNewUser', {signupData: formData, authBlob: authBlob}, gObj_hasRoot);
-        /* after signing up, go to sign in page */
-        //TODO router call sign-in
-        router.replace('/signin');
       })
       .catch(err => {
         console.error('createNewUser', err);
@@ -96,10 +87,6 @@ const actions = {
         dispatch('initSh/initDataBase', null, gObj_hasRoot);
 
         // dispatch('house/fetchActiveHouse', null, gObj_hasRoot); //moved into init module
-
-//TODO router call dashboard
-//         router.replace('/dashboard');
-
       })
       .catch(error => {
         console.error('login', error);
@@ -122,9 +109,6 @@ const actions = {
       userId: userId
     };
     if (!token) {
-      /* route user to sign in if no token*/
-      //TODO router call sign-in
-      // router.replace('/signin');
       return;
     }
     else if (now <= expirationDate) {
@@ -132,8 +116,8 @@ const actions = {
       let thing2 = 'fetchUser';
       let thing3 = 'refreshLogin';
       commit('SET_AUTH_DATA', authBlob);
-      //TODO find out if fetchUser actually exists or does anything
-      dispatch('user/fetchUser', null, gObj_hasRoot);
+
+      // dispatch('user/fetchUser', null, gObj_hasRoot);
     }
     else {
       dispatch('auth/refreshLogin', null, gObj_hasRoot);
@@ -153,8 +137,6 @@ const actions = {
     commit('supply/CLEAR_SUPPLIES', null, gObj_hasRoot);
     commit('membership/CLEAR_MEMBER_STATE', null, gObj_hasRoot);
     localStorage.clear();
-    //TODO router call sign-in
-    // router.replace('/signin');
   },
 
   logoutTimer({commit, state, dispatch}, expirationTime) {
@@ -198,8 +180,7 @@ const actions = {
           refreshToken: response.data.refresh_token,
           userId: response.data.user_id
         }, gObj_hasRoot);
-//TODO router call dashboard
-//         router.replace('/dashboard');
+
 
         /* *************************************
           firebase properties for refresh use same names, but different case than for log-in

@@ -215,7 +215,6 @@ const actions = {
     globalAxios.get('houses/' + houseId + '/supplies.json?auth=' + token)
       .then(resp => {
         console.log('fetchSupply', resp.data);
-        console.log('fetchSupply', resp.status);
         return resp.data;
       })
       .then(data => {

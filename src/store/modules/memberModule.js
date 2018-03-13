@@ -7,8 +7,6 @@
 
 
 import globalAxios from 'axios';
-//TODO deprecated vue-router import - change to 'routes.js'
-// import router from '../../router.js';
 
 import f7Router from '../../routes.js';
 

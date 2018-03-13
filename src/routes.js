@@ -1,8 +1,8 @@
 import Vue from 'vue';
 
 // import vuex store
-import store from './store/store';
-import {gObj_hasRoot} from './config.js';
+// import store from './store/store';
+// import {gObj_hasRoot} from './config.js';
 
 
 // console.log(thing);
@@ -65,16 +65,11 @@ export default [
     *  it sends you to JoinHouse*/
     async(routeTo, routeFrom, resolve, reject,) {
       if (localbelongsToHouse === false) {
-        // console.log("value: " + store.state.user.belongsToHouse);
         resolve({
           component: JoinHouse})
         }
       else
         {
-
-          //can I dispatch action?
-          store.dispatch('initSh/initDataBase', null, gObj_hasRoot);
-          // console.log("value: " + store.state.user.belongsToHouse);
           resolve({
             component: HomePage})
         }

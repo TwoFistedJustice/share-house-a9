@@ -233,10 +233,10 @@
       //       console.log('*****************created*******************');
       //TODO move these into a initModule, then use only a single dispatch  from here to there
       let thing1 = 'loginOmatic';
-      let thing2 = 'fetchSupply';
+      // let thing2 = 'fetchSupply';
       // let thing3 = 'initSupply';
-      let thing4 = 'initDataBase';
-      // this.$store.dispatch('chores/initChores', null, gObj_hasRoot);
+      // let thing4 = 'initDataBase';
+
       this.$store.dispatch('auth/loginOmatic', null, gObj_hasRoot);
       // this.$store.dispatch('initSh/initDataBase', null, gObj_hasRoot);
       // init supply misnamed - it sets okayToPost in state - probably not needed

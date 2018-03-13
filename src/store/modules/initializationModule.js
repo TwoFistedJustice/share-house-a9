@@ -79,6 +79,7 @@ const actions = {
           console.log('**********dataBase bool set')
       dispatch('house/fetchActiveHouse', null, gObj_hasRoot);
       dispatch('supply/fetchSupply', null, gObj_hasRoot);
+      // this.$store.dispatch('chores/initChores', null, gObj_hasRoot);
 
     }else{
       //check the DB again

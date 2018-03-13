@@ -1,8 +1,5 @@
 import globalAxios from 'axios';
 
-//TODO deprecated vue-router import - change to 'routes.js'
-// import router from '../../router.js';
-
 import {APIkey, gObj_hasRoot} from '../../config.js';
 
 
@@ -101,8 +98,6 @@ const actions = {
       localStorage.setItem('belongsToHouse', "false");
       localStorage.removeItem('houseId');
       commit('CLEAR_HOUSE_DATA');
-      // localStorage.removeItem('belongsToHouse');
-
     },
 
 
@@ -159,7 +154,6 @@ const actions = {
           commit('SET_HOUSE_ID', pushId);
           dispatch('instantiateHouse', pushId);
           dispatch('fetchActiveHouse');
-          // commit('user/SET_BELONGS_TO_HOUSE', true, gObj_hasRoot)
         })
         .catch(err => {
           console.error('house/createNewHouse', err);
@@ -335,7 +329,6 @@ const actions = {
           })
           .then(members => {
             /* sets admin and member count in memberModule */
-            // dispatch('membership/setAdminInfo', members, gObj_hasRoot);
             let thing4 = 'setAdmin_and_MemberCount';
             dispatch('membership/setAdmin_and_MemberCount', members, gObj_hasRoot);
           })
