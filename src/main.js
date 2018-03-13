@@ -48,8 +48,8 @@ new Vue({
     routes: Routes,
     on: {
       init: function () {
-        console.log('*******initializing F7 app');
-        store.dispatch('initSh/initDataBase', null, gObj_hasRoot);
+        console.log('*******initializing F7 app from main.js');
+        // store.dispatch('initSh/initDataBase', null, gObj_hasRoot);
       }
     }
   },

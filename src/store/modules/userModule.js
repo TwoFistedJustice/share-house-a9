@@ -5,12 +5,8 @@
 
 
 import globalAxios from 'axios';
-//TODO deprecated vue-router import - change to 'routes.js'
-// import router from '../../router.js';
 
 import {APIkey, gObj_hasRoot} from '../../config.js';
-
-// export {belongsToHouse};
 
 /* USER DATA THAT DOES NOT BELONG TO AUTH GOES HERE
 *   nicknames, user settings, etc.

@@ -171,7 +171,7 @@ const actions = {
 
         let userId = localStorage.getItem('userId');
 
-      console.log('measure: ', memberCount);
+      // console.log('measure: ', memberCount);
 
       if (memberCount === 1) {
 

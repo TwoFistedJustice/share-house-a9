@@ -8,8 +8,6 @@
 * */
 
 import globalAxios from 'axios';
-//TODO deprecated vue-router import - change to 'routes.js'
-// import router from '../../router.js';
 
 import {APIkey, gObj_hasRoot} from '../../config.js';
 
@@ -138,7 +136,7 @@ const mutations = {
 
     state.buttonHaveSwitch = holdingBool;
 
-    console.log('haveSwithc = ', state.buttonHaveSwitch);
+    // console.log('haveSwitch = ', state.buttonHaveSwitch);
 
   },
 
@@ -208,13 +206,13 @@ const actions = {
     dispatch('saveSupply', 'deleteItem');
   },
 
-  fetchSupply({dispatch, commit}) {
+  fetchSupply({dispatch, commit}, nameString) {
     let houseId = localStorage.getItem('houseId');
     let token = localStorage.getItem('token');
 
     globalAxios.get('houses/' + houseId + '/supplies.json?auth=' + token)
       .then(resp => {
-        console.log('fetchSupply', resp.data);
+        // console.log('fetchSupply' + nameString, resp.data);
         return resp.data;
       })
       .then(data => {
@@ -267,8 +265,8 @@ const actions = {
     // let houseName = rootGetters['house/getActiveHouse'].houseName;  //for testing
     let okayToPost = rootGetters['initSh/isDbResponding'];
 
-    let timeStamp = Date.now();
-    let now = timeStamp.toString();
+    // let timeStamp = Date.now();
+    // let now = timeStamp.toString();
     // end debug lets
 
     let houseId = localStorage.getItem('houseId');
@@ -282,7 +280,7 @@ const actions = {
         globalAxios.put('houses/' + houseId + '/supplies.json?auth=' + token, state.supplies)
           .then(function () {
             // state.fireBaseWrites.push(now);
-            console.log('putting supplies from ' + name, now);
+            // console.log('putting supplies from ' );
           })
           .catch(error => {
             console.error('SAVE_SUPPLY', error)

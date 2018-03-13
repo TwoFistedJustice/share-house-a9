@@ -8,9 +8,6 @@
 *  populate from Make-Profile.vue
 * */
 
-import globalAxios from 'axios';
-//TODO deprecated vue-router import - change to 'routes.js'
-// import router from '../../router.js';
 
 import {gObj_hasRoot} from '../../config.js';
 

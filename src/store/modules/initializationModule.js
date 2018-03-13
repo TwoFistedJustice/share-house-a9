@@ -57,7 +57,6 @@ const mutations = {
   SET_DATABASE_RESPONDING(state, responseCode){
     if (responseCode === 200){
       state.dataBaseResponding = true;
-      console.log('database responding');
 
     } else {
       console.error('database NOT responding. http code: ' + responseCode);
@@ -76,9 +75,12 @@ const actions = {
 
   initAppData({dispatch, commit, getters}) {
     if(getters.isDbResponding){
-          console.log('**********dataBase bool set')
+          // console.log('**********dataBase bool set')
+      let thing1 ='fetchActiveHouse';
+      let thing2 = 'fetchSupply';
       dispatch('house/fetchActiveHouse', null, gObj_hasRoot);
       dispatch('supply/fetchSupply', null, gObj_hasRoot);
+      // dispatch('supply/fetchSupply', ' initAppData if statement', gObj_hasRoot);
       // this.$store.dispatch('chores/initChores', null, gObj_hasRoot);
 
     }else{
@@ -91,6 +93,11 @@ const actions = {
 
   initDataBase({dispatch, commit, state}) {
     //I don't think I need okayToPost. If the houseId node responds we should be good to go
+    // if(nameString=== null){
+    //   throw 'lkjlkjlk'
+    // }
+    // console.trace('*^*^*^*^*^*^*^*^*^*^initDataBase ' + nameString);
+
 
     let token = localStorage.getItem('token');
     let houseId = localStorage.getItem('houseId');
@@ -99,7 +106,7 @@ const actions = {
       .then(resp => {
         /* passes http status code to set a bool that tells the app the DB is alive
         * 200 sets it true, any other code leaves it at default value of false*/
-        console.log('initDB' + resp);
+        // console.log('initDB' + resp);
         commit('SET_DATABASE_RESPONDING', resp.status);
         dispatch('initAppData');
       })

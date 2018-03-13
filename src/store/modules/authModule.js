@@ -84,7 +84,8 @@ const actions = {
         let thing3 = 'initDataBase';
         dispatch('auth/setLocalStorage', response.data, gObj_hasRoot);
         dispatch('auth/logoutTimer', response.data.expiresIn, gObj_hasRoot);
-        dispatch('initSh/initDataBase', null, gObj_hasRoot);
+        // dispatch('initSh/initDataBase', null, gObj_hasRoot);
+        dispatch('initSh/initDataBase', 'login', gObj_hasRoot);
 
         // dispatch('house/fetchActiveHouse', null, gObj_hasRoot); //moved into init module
       })
@@ -194,6 +195,7 @@ const actions = {
 
         }, gObj_hasRoot);
         dispatch('initSh/initDataBase', null, gObj_hasRoot);
+        // dispatch('initSh/initDataBase', 'refreshLogin', gObj_hasRoot);
         // dispatch('house/fetchActiveHouse', null, gObj_hasRoot);
       })
       .catch(error => console.error('refresh: ', error));
