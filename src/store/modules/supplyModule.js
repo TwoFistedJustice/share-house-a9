@@ -56,8 +56,8 @@ const mutations = {
     /* expects a supply object {item:, have: }
     * Capitalize each word of input
     * this makes it easier to read and helps to prevent duplicates */
-    supply.item = supply.item.replace(/\b\w/g, (l) => {
-      return l.toUpperCase()
+    supply.item = supply.item.replace(/\b\w/g, (firstLetter) => {
+      return firstLetter.toUpperCase()
     });
 
     /* If isSame is false, add the item

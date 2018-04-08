@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5d508418-5366-4e77-932d-cac85ea863b8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/notes/notesA9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/notes/notesA9.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/modules/authModule.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/modules/authModule.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/modules/houseModule.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/modules/houseModule.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/modules/initializationModule.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/modules/initializationModule.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/modules/memberModule.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/modules/memberModule.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/modules/userModule.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/modules/userModule.js" afterDir="false" />
-    </list>
+    <list default="true" id="5d508418-5366-4e77-932d-cac85ea863b8" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -26,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="houseModule.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/store/modules/houseModule.js">
+      <file leaf-file-name="supplyModule.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/store/modules/supplyModule.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="323" column="14" selection-start-line="323" selection-start-column="14" selection-end-line="323" selection-end-column="14" />
+            <state relative-caret-position="442">
+              <caret line="58" column="52" selection-start-line="58" selection-start-column="52" selection-end-line="58" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -91,7 +82,6 @@
         <option value="$PROJECT_DIR$/src/app.vue" />
         <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$PROJECT_DIR$/src/store/modules/profileModule.js" />
-        <option value="$PROJECT_DIR$/src/store/modules/supplyModule.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/store/modules/initializationModule.js" />
         <option value="$PROJECT_DIR$/src/assets/notes/notesA9.txt" />
@@ -99,6 +89,7 @@
         <option value="$PROJECT_DIR$/src/store/modules/userModule.js" />
         <option value="$PROJECT_DIR$/src/store/modules/authModule.js" />
         <option value="$PROJECT_DIR$/src/store/modules/houseModule.js" />
+        <option value="$PROJECT_DIR$/src/store/modules/supplyModule.js" />
       </list>
     </option>
   </component>
@@ -239,12 +230,12 @@
       <workItem from="1521431238815" duration="201000" />
       <workItem from="1521431486137" duration="255000" />
       <workItem from="1522181543471" duration="41000" />
-      <workItem from="1523158547453" duration="1432000" />
+      <workItem from="1523158547453" duration="1993000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123286000" />
+    <option name="totallyTimeSpent" value="123847000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1216" extended-state="6" />
@@ -259,7 +250,7 @@
       <window_info id="npm" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32979664" />
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.31463748" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.31388152" />
       <window_info id="Favorites" order="2" sideWeight="0.504788" side_tool="true" weight="0.23926868" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -522,27 +513,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/modules/initializationModule.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="79" column="6" selection-start-line="79" selection-start-column="6" selection-end-line="79" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/notes/notesA9.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/modules/memberModule.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -557,13 +531,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1530">
           <caret line="95" selection-start-line="95" selection-end-line="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/modules/supplyModule.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1224">
-          <caret line="24" column="68" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="68" />
         </state>
       </provider>
     </entry>
@@ -586,8 +553,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/store/modules/houseModule.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="323" column="14" selection-start-line="323" selection-start-column="14" selection-end-line="323" selection-end-column="14" />
+        <state relative-caret-position="359">
+          <caret line="372" column="130" selection-start-line="372" selection-start-column="125" selection-end-line="372" selection-end-column="130" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/modules/initializationModule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="30" column="56" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/modules/memberModule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="14" />
+          <folding>
+            <element signature="e#290#322#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/modules/supplyModule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="58" column="52" selection-start-line="58" selection-start-column="52" selection-end-line="58" selection-end-column="52" />
         </state>
       </provider>
     </entry>
