@@ -93,7 +93,7 @@ const actions = {
     globalAxios.patch('users/' + userId + '/house.json?auth=' + token, houseBlob)
     /*creates the house node in the nameFull's node*/
       .then(response => {
-        let thing = 'fetchActiveHouse';
+        let highlightRefs = ['fetchActiveHouse'];
         dispatch('house/fetchActiveHouse', null, gObj_hasRoot);
 
       })
@@ -109,7 +109,7 @@ const actions = {
     * */
     /*  if user belongs to a house, get their info from local state */
     if (payload != null) {
-      let thing1 = 'SET_USER_INFO';
+      let highlightRefs = ['SET_USER_INFO'];
       commit('user/SET_USER_INFO', payload, gObj_hasRoot);
     } else {
 
@@ -134,7 +134,7 @@ const actions = {
             // nameFull: response.data.name.first + ' ' + response.data.name.last,
             role: role
           };
-          let thing2 = 'SET_USER_INFO';
+          let highlightRefs = ['SET_USER_INFO'];
           commit('user/SET_USER_INFO', userBlob, gObj_hasRoot);
 
         })

@@ -18,3 +18,14 @@ they enter the house nameFull in one input using the alpha keyboard
 then they enter the code in another, using phone dialer
 The admin gets to accept or deny a new member
       - this might require Cordova
+
+
+Oddball things you might find:
+
+highlightefs Arrays
+let highlightRefs = ['function1', 'function2', 'function3'];
+
+These don't do anything except make Webstorm syntax highlighting work with Vue namespacing.
+Without these, Webstorm syntax highlighting won't recognize functions that are used
+only outside their parent module. Once they get syntax highlighting working with the new
+namespace protocol, all of these arrays can be deleted.

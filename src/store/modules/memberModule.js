@@ -77,7 +77,7 @@ const actions = {
             .then(
               /* after adding the user to the house, add the house to the user */
               function () {
-                let thing = 'addHouseToUser';
+                let highlightRefs = ['addHouseToUser'];
                 dispatch('user/addHouseToUser', {houseId: houseId}, gObj_hasRoot);
               }
             )
@@ -164,10 +164,8 @@ const actions = {
             return resp;
           })
           .then(function () {
-            let thing1 = 'removeHouseFromMember';
-            let thing2 = 'fetchActiveHouse';
-            let thing3 = 'clearUserData';
-            let thing4 = 'CLEAR_HOUSE_DATA';
+
+            let highlightRefs = ['removeHouseFromMember', 'fetchActiveHouse', 'clearUserData', 'CLEAR_HOUSE_DATA'];
 
             dispatch('membership/removeHouseFromMember', memberId, gObj_hasRoot);
 

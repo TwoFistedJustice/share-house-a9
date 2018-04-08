@@ -54,7 +54,7 @@ const actions = {
           idToken: response.data.idToken,
           userId: response.data.localId
         };
-        let thing = 'storeNewUser';
+        let highlightRefs = ['storeNewUser'];
         dispatch('user/storeNewUser', {signupData: formData, authBlob: authBlob}, gObj_hasRoot);
       })
       .catch(err => {
@@ -79,9 +79,8 @@ const actions = {
           userId: response.data.localId
         }, gObj_hasRoot);
 
-        let thing1 = 'setLocalStorage';
-        let thing2 = 'logoutTimer';
-        let thing3 = 'initDataBase';
+        let highlightRefs = ['setLocalStorage', 'logoutTimer', 'initDataBase'];
+
         dispatch('auth/setLocalStorage', response.data, gObj_hasRoot);
         dispatch('auth/logoutTimer', response.data.expiresIn, gObj_hasRoot);
         // dispatch('initSh/initDataBase', null, gObj_hasRoot);
@@ -113,9 +112,9 @@ const actions = {
       return;
     }
     else if (now <= expirationDate) {
-      let thing1 = 'SET_AUTH_DATA';
-      let thing2 = 'fetchUser';
-      let thing3 = 'refreshLogin';
+
+      let highlightRefs = ['SET_AUTH_DATA', 'fetchUser', 'refreshLogin'];
+
       commit('SET_AUTH_DATA', authBlob);
 
       // dispatch('user/fetchUser', null, gObj_hasRoot);
@@ -127,10 +126,9 @@ const actions = {
 
   logout({commit}) {
     // console.log('****************** logout');
-    let thing1 = 'CLEAR_AUTH_DATA';
-    let thing2 = 'CLEAR_HOUSE_DATA';
-    let thing3 = 'CLEAR_USER_DATA';
-    let thing4 = 'CLEAR_USER_NAME';
+
+    let highlightRefs = ['CLEAR_AUTH_DATA', 'CLEAR_HOUSE_DATA', 'CLEAR_USER_DATA', 'CLEAR_USER_NAME'];
+
     commit('auth/CLEAR_AUTH_DATA', null, gObj_hasRoot);
     commit('house/CLEAR_HOUSE_DATA', null, gObj_hasRoot);
     commit('user/CLEAR_USER_DATA', null, gObj_hasRoot);
@@ -152,8 +150,8 @@ const actions = {
 
     if (state.keepMeLoggedIn) {
       setTimeout(() => {
-        let thing1='refreshLogin';
-        let thing2='logout';
+        let highlightRefs = ['logout', 'refreshLogin'];
+
         dispatch('auth/refreshLogin', null, gObj_hasRoot)
       }, expirationTime * 999);
     } else {
@@ -171,10 +169,7 @@ const actions = {
       'grant_type=refresh_token&refresh_token=' + refreshToken)
 
       .then(response => {
-        // console.log('refresh', response);
-        let thing1 = 'SET_AUTH_DATA';
-        let thing2 = 'setLocalStorage';
-        let thing3 = 'fetchActiveHouse';
+        let highlightRefs = ['fetchActiveHouse', 'setLocalStorage', 'SET_AUTH_DATA'];
 
         commit('auth/SET_AUTH_DATA', {
           idToken: response.data.id_token,

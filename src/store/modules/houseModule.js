@@ -236,8 +236,8 @@ const actions = {
             // console.log('response.data.active ', typeof(response.data.active));
             houseId = response.data.houseId;
             localStorage.setItem('houseId', houseId);
-            let thing1 = 'SET_BELONGS_TO_HOUSE';
-            let thing2 = 'SET_HOUSE_ID';
+
+            let highlightRefs = ['SET_BELONGS_TO_HOUSE', 'SET_HOUSE_ID'];
 
             /* commit setter true for belongs to house */
             commit('user/SET_BELONGS_TO_HOUSE', true, gObj_hasRoot);
@@ -321,7 +321,7 @@ const actions = {
             members.push(memberBlob);
 
             if (memberArray[i].id === userId) {
-              let thing3 = 'setUserInfo';
+              let highlightRefs = ['setUserInfo'];
               dispatch('user/setUserInfo', memberBlob, gObj_hasRoot);
             }
             // return 0;
@@ -329,7 +329,7 @@ const actions = {
           })
           .then(members => {
             /* sets admin and member count in memberModule */
-            let thing4 = 'setAdmin_and_MemberCount';
+            let highlightRefs = ['setAdmin_and_MemberCount'];
             dispatch('membership/setAdmin_and_MemberCount', members, gObj_hasRoot);
           })
           .catch(err => console.log('fetchMembers for loop ', err));
@@ -337,8 +337,7 @@ const actions = {
 
       } //end for-i loop
 
-      let thing1 = 'SET_HOUSE_MEMBERS';
-      let thing2 = 'SET_HOUSE_NAME';
+      let highlightRefs = ['SET_HOUSE_MEMBERS', 'SET_HOUSE_NAME'];
 
       commit('house/SET_HOUSE_MEMBERS', members, gObj_hasRoot);
 
@@ -357,7 +356,7 @@ const actions = {
       let houseBlob = {
         houseId: pushId,
       }
-      let thing = 'addHouseToUser';
+      let highlightRefs = ['addHouseToUser'];
       dispatch('user/addHouseToUser', houseBlob, gObj_hasRoot);
 
       //these will get moved into their appropriate modules as helpers then get dispatched when user adds data

@@ -76,8 +76,8 @@ const actions = {
   initAppData({dispatch, commit, getters}) {
     if(getters.isDbResponding){
           // console.log('**********dataBase bool set')
-      let thing1 ='fetchActiveHouse';
-      let thing2 = 'fetchSupply';
+      let highlightRefs = ['fetchActiveHouse', 'fetchSupply'];
+
       dispatch('house/fetchActiveHouse', null, gObj_hasRoot);
       dispatch('supply/fetchSupply', null, gObj_hasRoot);
       // dispatch('supply/fetchSupply', ' initAppData if statement', gObj_hasRoot);
