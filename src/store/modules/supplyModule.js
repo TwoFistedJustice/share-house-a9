@@ -63,6 +63,11 @@ const mutations = {
     /* If isSame is false, add the item
     * prevents exact duplicates */
     let isSame = true;
+    // todo refactor with Array.includes() ??
+
+    console.log('isSame before', isSame);
+    // isSame = state.supplies.includes(supply.item);
+    console.log('isSame after', isSame);
 
     for (let i = 0, n = state.supplies.length; i < n; i++) {
       if (supply.item === state.supplies[i].item) {
@@ -122,10 +127,18 @@ const mutations = {
     *  set the holding bool to false if zero, and true if length */
     let sum = 0;
     /* add one or zero to val */
-    for (let i = 0; i < supplies.length; i++) {
-      let val = supplies[i].have ? 1 : 0;
-      sum += val;
-    }
+
+    // for (let i = 0; i < supplies.length; i++) {
+    //   let val = supplies[i].have ? 1 : 0;
+    //   sum += val;
+    // }
+    // refactor of loop above
+    supplies.forEach(supply => {
+      if (supply.have === true){
+        sum++;
+      }
+    });
+
     if (sum === 0) {
       holdingBool = false;
     } else if (sum === supplies.length) {
@@ -294,7 +307,6 @@ const actions = {
   // the infinite loop passes through here - maybe related to save...
   /* expects a boolean */
   setDisplayHaveSwitch({dispatch, commit}) {
-
     commit('SET_BUTTON_HAVE_SWITCH');
   },
 

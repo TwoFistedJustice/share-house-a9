@@ -34,7 +34,7 @@
 
 
     <item-modify v-for="(supply, index) in getSupplies"
-                 :key="supply.item + index"
+                 :key="supply.item + Math.random() + index"
                  :supply="supply"
                  :index="index"></item-modify>
 
@@ -93,14 +93,14 @@
       addToSuppliesList() {
 
         let supply = {item: this.supplyToAdd, have: false, inCart: false};
-        console.log(supply);
+        console.log('addToSuppiesList()', supply);
 
         this.addSupply(supply);
         this.supplyToAdd = '';
       },
-      fetchData() {
-        console.log('fetch');
-      }
+      // fetchData() {
+      //   console.log('fetch');
+      // }
 
 
     }, // END METHODS

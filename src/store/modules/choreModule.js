@@ -20,8 +20,6 @@ const getters = {
   GetRotation (state) {
     return state.rotation;
   },
-
-
 };
 
 const mutations = {
@@ -105,8 +103,6 @@ const actions = {
   },
 
 };
-
-
 
 export default {
   namespaced: true,

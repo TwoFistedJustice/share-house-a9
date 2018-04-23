@@ -67,9 +67,6 @@ const mutations = {
 
 };
 
-
-
-
 // ACTIONS actions ACTIONS actions
 const actions = {
 
@@ -87,8 +84,6 @@ const actions = {
       //check the DB again
       dispatch('initDataBase');
     }
-
-
   },
 
   initDataBase({dispatch, commit, state}) {
@@ -114,8 +109,6 @@ const actions = {
   },
 
 };
-
-
 
 
 export default {

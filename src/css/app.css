@@ -25,3 +25,15 @@
 .sh-how-to {
   background-color: orange;
 }
+
+
+.sh-center-content {
+  max-width: 768px;
+  /*max-width: 900px;*/
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sh-center-element {
+  margin: auto;
+}

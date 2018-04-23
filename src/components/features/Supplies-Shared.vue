@@ -22,9 +22,8 @@
     </f7-block>
 
     <inventory-item v-for="(supply, index) in getSupplies"
-                    :key="supply.item + index"
+                    :key="supply.item + Math.random() + index"
                     :supply="supply"></inventory-item>
-
 
     <f7-popup id="inventory-list-instructions">
       <f7-view>
@@ -77,6 +76,7 @@
 
         // this.setDisplayHaveSwitch(this.checkArrayBools());
         // this.$store.dispatch('supply/setDisplayHaveSwitch', this.checkArrayBools(), gObj_hasRoot);
+        let thing1 = 'setDisplayHaveSwitch';
         this.$store.dispatch('supply/setDisplayHaveSwitch', null, gObj_hasRoot);
 
         if (this.getHaveSwitch === true) {

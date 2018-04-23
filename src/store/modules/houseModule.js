@@ -167,10 +167,7 @@ const actions = {
         * */
       // let memberCount = getters.GetMemberCount;
       let memberCount = state.activeHouse.members.length;
-
-
-        let userId = localStorage.getItem('userId');
-
+      let userId = localStorage.getItem('userId');
       // console.log('measure: ', memberCount);
 
       if (memberCount === 1) {
@@ -186,6 +183,7 @@ const actions = {
         if (isReallySure) {
           let token = localStorage.getItem('token');
           let houseId = localStorage.getItem('houseId');
+          let highlightRefs = ['removeHouseFromMember', 'SET_BELONGS_TO_HOUSE'];
 
           globalAxios.delete('/houses/' + houseId + '.json?auth=' + token)
             .then(resp => {
@@ -295,6 +293,7 @@ const actions = {
       * call db for each member
       * get names, push onto new array
       * pass that array to a mutation to set house members in state*/
+      //TODO refactor with Array.map ??
       let members = [];
 
       for (let i = 0, ln = memberArray.length; i < ln; i++) {

@@ -1,5 +1,6 @@
-<template>
-  <div @click="supply.have = !supply.have">
+  <template>
+  <!--<div @click="supply.have = !supply.have">-->
+  <!--<div>-->
     <f7-block>
       <f7-card>
         <f7-card-content>
@@ -13,14 +14,12 @@
           <f7-button v-if="allowDelete" big round fill
                      color="red"
                      @click="deleteItem(index)"><strong>Delete!</strong></f7-button>
-          <!--<f7-button v-if="!allowDelete" small round color="gray">Prepare to Delete!</f7-button>-->
-
-
+          <!--<f7-button v-if="!allowDelete"  small round color="gray">Prepare to Delete!</f7-button>-->
         </f7-list>
 
       </f7-card>
     </f7-block>
-  </div>
+  <!--</div>-->
 
 </template>
 
