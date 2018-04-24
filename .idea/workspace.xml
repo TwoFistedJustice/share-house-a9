@@ -3,19 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5d508418-5366-4e77-932d-cac85ea863b8" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/elements/Item-Modify.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/elements/Item-Modify.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/features/Supplies-Modify.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/features/Supplies-Modify.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/features/Supplies-Shared.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/features/Supplies-Shared.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/structure/Supply-Tabs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/structure/Supply-Tabs.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/modules/choreModule.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/modules/choreModule.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/modules/houseModule.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/modules/houseModule.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/modules/initializationModule.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/modules/initializationModule.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/modules/supplyModule.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/modules/supplyModule.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,12 +19,12 @@
     <favorites_list name="share-house-alpha-09" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Supplies-Modify.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/features/Supplies-Modify.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+              <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -44,8 +32,8 @@
       <file leaf-file-name="Supply-Tabs.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/structure/Supply-Tabs.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="29" lean-forward="true" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+            <state relative-caret-position="408">
+              <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -53,8 +41,8 @@
       <file leaf-file-name="routes.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="774">
-              <caret line="178" column="3" lean-forward="true" selection-start-line="178" selection-start-column="3" selection-end-line="178" selection-end-column="3" />
+            <state relative-caret-position="2805">
+              <caret line="178" column="3" selection-start-line="178" selection-start-column="3" selection-end-line="178" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -310,33 +298,35 @@
       <workItem from="1523737925120" duration="198000" />
       <workItem from="1523745445565" duration="8558000" />
       <workItem from="1524250357531" duration="1149000" />
-      <workItem from="1524512897621" duration="9121000" />
+      <workItem from="1524512897621" duration="9326000" />
+      <workItem from="1524604018009" duration="297000" />
+      <workItem from="1524605492157" duration="927000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149262000" />
+    <option name="totallyTimeSpent" value="150691000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="816" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" x="173" y="205" width="226" height="728" id="Project" order="3" sideWeight="0.49521205" visible="true" weight="0.21144675" />
+      <window_info content_ui="combo" x="173" y="205" width="226" height="728" id="Project" order="3" sideWeight="0.49521205" visible="true" weight="0.21144675" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" weight="0.32968536" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32360741" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32979664" />
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.47879618" />
       <window_info id="Favorites" order="2" sideWeight="0.504788" side_tool="true" weight="0.23926868" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32979664" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32360741" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
     </layout>
@@ -345,11 +335,11 @@
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" weight="0.32968536" />
       <window_info id="npm" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32979664" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" x="173" y="205" width="226" height="728" id="Project" order="3" sideWeight="0.49521205" visible="true" weight="0.21144675" />
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32360741" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -724,21 +714,21 @@
     <entry file="file://$PROJECT_DIR$/src/components/features/Supplies-Modify.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="774">
-          <caret line="178" column="3" lean-forward="true" selection-start-line="178" selection-start-column="3" selection-end-line="178" selection-end-column="3" />
+        <state relative-caret-position="2805">
+          <caret line="178" column="3" selection-start-line="178" selection-start-column="3" selection-end-line="178" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/structure/Supply-Tabs.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="29" lean-forward="true" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+        <state relative-caret-position="408">
+          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
         </state>
       </provider>
     </entry>
