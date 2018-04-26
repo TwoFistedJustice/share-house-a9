@@ -32,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/structure/Supply-Tabs.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="24" column="52" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+              <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -301,12 +301,12 @@
       <workItem from="1524604018009" duration="297000" />
       <workItem from="1524605492157" duration="1777000" />
       <workItem from="1524613132998" duration="158000" />
-      <workItem from="1524784798189" duration="254000" />
+      <workItem from="1524784798189" duration="317000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151953000" />
+    <option name="totallyTimeSpent" value="152016000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="816" extended-state="6" />
@@ -729,7 +729,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/structure/Supply-Tabs.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="24" column="52" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+          <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
         </state>
       </provider>
     </entry>
