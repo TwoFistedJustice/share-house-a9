@@ -22,7 +22,7 @@
         <supplies-modify></supplies-modify>
       </f7-tab>
       <f7-tab id="tabSupply4">
-        <p><-- Go back the other way remove this</p>
+        <p><-- Go back the other way remove this now</p>
 
       </f7-tab>
 
